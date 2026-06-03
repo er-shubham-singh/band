@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --brand: #16A34A;
+  --soft: #ecfdf5;
+  --glass: rgba(255,255,255,0.72);
+  --glass-border: rgba(255,255,255,0.24);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: radial-gradient(circle at top left, rgba(22,163,74,0.12), transparent 28%), linear-gradient(180deg, #ffffff 0%, #f1fdf3 100%);
+  color: #0f172a;
+}
+
+::selection {
+  background: rgba(22,163,74,0.16);
+  color: #065f46;
+}
+
+#root {
+  isolation: isolate;
+}
+
+.backdrop-glow {
+  backdrop-filter: blur(18px);
+  background: rgba(255,255,255,0.64);
+  border: 1px solid rgba(255,255,255,0.28);
+  box-shadow: 0 30px 90px rgba(15,23,42,0.08);
+}
+
+.glass-card {
+  @apply rounded-[28px] border border-white/40 bg-white/55 shadow-[0_20px_70px_rgba(15,23,42,0.08)];
+}
+
+.section-frame {
+  @apply mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8;
+}
+
+.section-title {
+  @apply font-semibold text-slate-900;
+}
+
+.section-description {
+  @apply mt-3 max-w-2xl text-slate-600;
+}
+
+.button-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/15 transition hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-200;
+}
+
+.button-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-emerald-200 hover:text-emerald-700;
+}
+
+.hero-bg {
+  background-image: radial-gradient(circle at 20% 15%, rgba(22,163,74,0.18), transparent 22%), radial-gradient(circle at 80% 10%, rgba(167,243,208,0.22), transparent 18%), radial-gradient(circle at 50% 100%, rgba(74,222,128,0.16), transparent 28%);
+}
+
+.masonry-grid {
+  column-gap: 1.5rem;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1280px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
