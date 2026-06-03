@@ -1,0 +1,30 @@
+# Node modules
+node_modules/
+*/node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+*/.env
+
+# Build folders
+build/
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# React specific
+canteen/build/
+
+# Backend uploads/temp (optional)
+backend/uploads/
