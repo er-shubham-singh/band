@@ -5,7 +5,7 @@ function CTASection() {
   return (
     <section id="packages" className="w-full bg-white py-16 sm:py-24">
       <div className="section-frame">
-        <div className="relative rounded-[40px] border border-slate-200 bg-gradient-to-br from-[#eef4ea] to-white p-8 shadow-lg sm:p-12">
+        <div className="relative rounded-[40px] border border-slate-200 bg-linear-to-br from-[#eef4ea] to-white p-8 shadow-lg sm:p-12">
           <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div>
               <p className="text-sm uppercase tracking-[0.38em] text-[#1f5d44] font-semibold">Let's begin</p>

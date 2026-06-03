@@ -21,7 +21,7 @@ function ServiceCard({ service }) {
         <div className="space-y-3">
           {service.features.map((feature) => (
             <div key={feature} className="flex items-start gap-3 text-sm text-slate-700">
-              <FiCheckCircle className="mt-1 h-4 w-4 text-[#1f5d44] flex-shrink-0" />
+              <FiCheckCircle className="mt-1 h-4 w-4 text-[#1f5d44] shrink-0" />
               <span>{feature}</span>
             </div>
           ))}

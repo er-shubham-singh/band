@@ -47,11 +47,11 @@ function Gallery() {
               type="button"
               whileHover={{ scale: 1.02 }}
               onClick={() => setSelected(item)}
-              className="masonry-item group w-full overflow-hidden rounded-[32px] border border-white/70 bg-white/80 p-0 text-left shadow-[0_35px_90px_rgba(15,23,42,0.06)]"
+              className="masonry-item group w-full overflow-hidden rounded-4xl border border-white/70 bg-white/80 p-0 text-left shadow-[0_35px_90px_rgba(15,23,42,0.06)]"
             >
               <div className="relative h-96 overflow-hidden">
                 <img src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-slate-950/80 to-transparent" />
                 <div className="absolute bottom-0 p-5 text-white">
                   <p className="text-sm uppercase tracking-[0.35em] text-[#d9e8d8]">{item.category}</p>
                   <h3 className="mt-2 text-2xl font-semibold">{item.title}</h3>
@@ -69,7 +69,7 @@ function Gallery() {
           exit={{ opacity: 0 }}
           className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 p-4"
         >
-          <div className="relative max-w-5xl overflow-hidden rounded-[32px] bg-white shadow-[0_40px_120px_rgba(15,23,42,0.3)]">
+          <div className="relative max-w-5xl overflow-hidden rounded-4xl bg-white shadow-[0_40px_120px_rgba(15,23,42,0.3)]">
             <button
               type="button"
               onClick={() => setSelected(null)}
@@ -77,7 +77,7 @@ function Gallery() {
             >
               ✕
             </button>
-            <img src={selected.image} alt={selected.title} className="h-[520px] w-full object-cover sm:h-[620px]" />
+            <img src={selected.image} alt={selected.title} className="h-130 w-full object-cover sm:h-155" />
             <div className="space-y-3 p-8">
               <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">{selected.category}</p>
               <h2 className="text-3xl font-semibold text-slate-900">{selected.title}</h2>

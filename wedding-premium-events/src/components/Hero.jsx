@@ -51,18 +51,18 @@ function Hero() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.92),transparent_16%),radial-gradient(circle_at_bottom_right,rgba(243,219,181,0.18),transparent_28%)]" />
           <div className="relative grid gap-5 p-8 sm:p-10">
             <div className="grid gap-4 sm:grid-cols-[0.95fr_1.05fr]">
-              <div className="rounded-[32px] bg-[#f3eadc] p-6">
+              <div className="rounded-4xl bg-[#f3eadc] p-6">
                 <p className="text-sm uppercase tracking-[0.34em] text-[#1f5d44]">Procession styling</p>
                 <h2 className="mt-4 text-2xl font-semibold text-slate-900">Grand entrance design</h2>
                 <p className="mt-3 text-slate-700">From ghori ceremony arrivals to elegant baggi processions, we make every entrance unforgettable.</p>
               </div>
-              <div className="rounded-[32px] bg-white p-6 shadow-sm border border-slate-200">
+              <div className="rounded-4xl bg-white p-6 shadow-sm border border-slate-200">
                 <p className="text-sm uppercase tracking-[0.34em] text-[#1f5d44]">Curated entertainment</p>
                 <h3 className="mt-3 text-xl font-semibold text-slate-900">Dhol, band & shehnai</h3>
                 <p className="mt-2 text-slate-600">Live musical experiences and ceremony ambiance tailored to your celebration.</p>
               </div>
             </div>
-            <div className="rounded-[32px] overflow-hidden bg-slate-950/5">
+            <div className="rounded-4xl overflow-hidden bg-slate-950/5">
               <img
                 src="https://images.unsplash.com/photo-1524439941394-4b99d1578c53?auto=format&w=1200&q=80"
                 alt="Wedding celebration"

@@ -71,8 +71,8 @@ function Packages() {
               <h2 className="mt-4 text-3xl font-semibold text-slate-900 sm:text-4xl">Choose the right experience for your celebration.</h2>
               <p className="mt-4 text-slate-600">Compare our packages side-by-side to find the balance between elegance, entertainment, and planning support.</p>
             </div>
-            <div className="overflow-x-auto rounded-[32px] border border-slate-200 bg-white p-5 shadow-sm">
-              <table className="min-w-[520px] w-full text-left text-sm text-slate-700">
+            <div className="overflow-x-auto rounded-4xl border border-slate-200 bg-white p-5 shadow-sm">
+              <table className="min-w-130 w-full text-left text-sm text-slate-700">
                 <thead>
                   <tr>
                     <th className="pb-4 font-semibold text-slate-900">Feature</th>

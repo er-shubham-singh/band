@@ -97,7 +97,7 @@ function Contact() {
           </form>
 
           <div className="space-y-6 rounded-[40px] border border-white/70 bg-white p-8 shadow-[0_40px_90px_rgba(15,23,42,0.08)]">
-            <div className="rounded-[32px] bg-slate-950/5 p-6">
+            <div className="rounded-4xl bg-slate-950/5 p-6">
               <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">Google map</p>
               <div className="mt-6 h-72 rounded-[28px] bg-slate-900/10 p-6 text-slate-500">
                 <p className="text-sm">Map placeholder for event venue planning.</p>
@@ -105,7 +105,7 @@ function Contact() {
               </div>
             </div>
 
-            <div className="grid gap-4 rounded-[32px] bg-[#eef4ea] p-6">
+            <div className="grid gap-4 rounded-4xl bg-[#eef4ea] p-6">
               <div>
                 <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">Office address</p>
                 <p className="mt-3 text-slate-700">Marine Drive, Mumbai, India</p>
