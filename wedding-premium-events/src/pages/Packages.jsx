@@ -33,7 +33,7 @@ function Packages() {
     <div className="space-y-16">
       <section className="section-frame">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm uppercase tracking-[0.35em] text-emerald-700">Packages</p>
+          <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">Packages</p>
           <h1 className="mt-4 text-4xl font-semibold text-slate-900 sm:text-5xl">Select a premium package for your wedding celebration.</h1>
           <p className="mt-6 section-description">Each tier blends refined entertainment, ceremony essentials, and expert coordination for a seamless day.</p>
         </div>
@@ -47,12 +47,12 @@ function Packages() {
               whileHover={{ y: -6 }}
               className="glass-card p-8"
             >
-              <p className="text-sm uppercase tracking-[0.35em] text-emerald-700">{item.name}</p>
+              <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">{item.name}</p>
               <p className="mt-4 text-5xl font-semibold text-slate-900">{item.price}</p>
               <p className="mt-4 text-slate-600">{item.description}</p>
               <ul className="mt-6 space-y-3 text-slate-700">
                 {item.features.map((feature) => (
-                  <li key={feature} className="rounded-3xl bg-emerald-50 px-4 py-3">{feature}</li>
+                  <li key={feature} className="rounded-3xl bg-[#eef4ea] px-4 py-3">{feature}</li>
                 ))}
               </ul>
               <a href="#contact" className="button-primary mt-8 inline-flex w-full justify-center">
@@ -67,7 +67,7 @@ function Packages() {
         <div className="rounded-[40px] border border-white/70 bg-white/80 p-8 shadow-[0_40px_90px_rgba(15,23,42,0.08)]">
           <div className="grid gap-8 lg:grid-cols-[1.3fr_0.7fr] lg:items-center">
             <div>
-              <p className="text-sm uppercase tracking-[0.35em] text-emerald-700">Comparison</p>
+              <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">Comparison</p>
               <h2 className="mt-4 text-3xl font-semibold text-slate-900 sm:text-4xl">Choose the right experience for your celebration.</h2>
               <p className="mt-4 text-slate-600">Compare our packages side-by-side to find the balance between elegance, entertainment, and planning support.</p>
             </div>

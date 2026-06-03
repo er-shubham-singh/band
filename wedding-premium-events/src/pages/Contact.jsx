@@ -35,21 +35,21 @@ function Contact() {
       <section className="section-frame">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="text-sm uppercase tracking-[0.35em] text-emerald-700">Contact</p>
+            <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">Contact</p>
             <h1 className="mt-4 text-4xl font-semibold text-slate-900 sm:text-5xl">Talk to our event team and plan your dream wedding.</h1>
             <p className="mt-6 section-description">Send us a message to explore packages, vendor coordination, and bespoke wedding entertainment options.</p>
           </div>
-          <div className="rounded-[40px] bg-emerald-600 p-8 text-white shadow-[0_40px_90px_rgba(22,163,74,0.24)] sm:p-10">
-            <p className="text-sm uppercase tracking-[0.35em] text-emerald-100">Office hours</p>
+          <div className="rounded-[40px] bg-[#1f5d44] p-8 text-white shadow-[0_40px_90px_rgba(15,23,42,0.18)] sm:p-10">
+            <p className="text-sm uppercase tracking-[0.35em] text-[#d9e8d8]">Office hours</p>
             <p className="mt-4 text-3xl font-semibold">Mon - Sat • 9 am - 7 pm</p>
-            <div className="mt-6 space-y-4 text-sm text-emerald-100/90">
+            <div className="mt-6 space-y-4 text-sm text-[#e8f0e8]">
               <div className="flex items-center gap-3">
                 <FiPhoneCall className="h-5 w-5" />
                 <span>+91 81234 56789</span>
               </div>
               <div className="flex items-center gap-3">
                 <FiMail className="h-5 w-5" />
-                <span>hello@emeraldevents.in</span>
+                <span>hello@whiteorchidevents.in</span>
               </div>
               <div className="flex items-center gap-3">
                 <FiMapPin className="h-5 w-5" />
@@ -74,48 +74,48 @@ function Contact() {
           <form onSubmit={handleSubmit} className="space-y-6 rounded-[40px] border border-white/70 bg-white p-8 shadow-[0_40px_90px_rgba(15,23,42,0.08)] sm:p-10">
             <div>
               <label className="block text-sm font-semibold text-slate-900">Name</label>
-              <input value={form.name} onChange={handleChange('name')} className="mt-3 w-full rounded-3xl border border-slate-200 bg-slate-50 px-5 py-4 text-slate-700 outline-none focus:border-emerald-300 focus:ring-2 focus:ring-emerald-100" placeholder="Your full name" />
+              <input value={form.name} onChange={handleChange('name')} className="mt-3 w-full rounded-3xl border border-slate-200 bg-slate-50 px-5 py-4 text-slate-700 outline-none focus:border-[#a2c1ac] focus:ring-2 focus:ring-[#d9e8d8]" placeholder="Your full name" />
             </div>
             <div className="grid gap-6 md:grid-cols-2">
               <div>
                 <label className="block text-sm font-semibold text-slate-900">Email</label>
-                <input value={form.email} onChange={handleChange('email')} type="email" className="mt-3 w-full rounded-3xl border border-slate-200 bg-slate-50 px-5 py-4 text-slate-700 outline-none focus:border-emerald-300 focus:ring-2 focus:ring-emerald-100" placeholder="Email address" />
+                <input value={form.email} onChange={handleChange('email')} type="email" className="mt-3 w-full rounded-3xl border border-slate-200 bg-slate-50 px-5 py-4 text-slate-700 outline-none focus:border-[#a2c1ac] focus:ring-2 focus:ring-[#d9e8d8]" placeholder="Email address" />
               </div>
               <div>
                 <label className="block text-sm font-semibold text-slate-900">Phone</label>
-                <input value={form.phone} onChange={handleChange('phone')} type="tel" className="mt-3 w-full rounded-3xl border border-slate-200 bg-slate-50 px-5 py-4 text-slate-700 outline-none focus:border-emerald-300 focus:ring-2 focus:ring-emerald-100" placeholder="Mobile number" />
+                <input value={form.phone} onChange={handleChange('phone')} type="tel" className="mt-3 w-full rounded-3xl border border-slate-200 bg-slate-50 px-5 py-4 text-slate-700 outline-none focus:border-[#a2c1ac] focus:ring-2 focus:ring-[#d9e8d8]" placeholder="Mobile number" />
               </div>
             </div>
             <div>
               <label className="block text-sm font-semibold text-slate-900">Tell us about your event</label>
-              <textarea value={form.message} onChange={handleChange('message')} rows="5" className="mt-3 w-full rounded-[28px] border border-slate-200 bg-slate-50 px-5 py-4 text-slate-700 outline-none focus:border-emerald-300 focus:ring-2 focus:ring-emerald-100" placeholder="Ceremony date, venue, and any special requests" />
+              <textarea value={form.message} onChange={handleChange('message')} rows="5" className="mt-3 w-full rounded-[28px] border border-slate-200 bg-slate-50 px-5 py-4 text-slate-700 outline-none focus:border-[#a2c1ac] focus:ring-2 focus:ring-[#d9e8d8]" placeholder="Ceremony date, venue, and any special requests" />
             </div>
             <button type="submit" disabled={!canSubmit || isSending} className="button-primary inline-flex items-center justify-center gap-2 w-full disabled:cursor-not-allowed disabled:opacity-60">
               {isSending ? <LoadingSpinner /> : 'Send inquiry'}
             </button>
-            {sent && <p className="text-sm text-emerald-700">Your request has been received. Our team will follow up within one business day.</p>}
+            {sent && <p className="text-sm text-[#1f5d44]">Your request has been received. Our team will follow up within one business day.</p>}
           </form>
 
           <div className="space-y-6 rounded-[40px] border border-white/70 bg-white p-8 shadow-[0_40px_90px_rgba(15,23,42,0.08)]">
             <div className="rounded-[32px] bg-slate-950/5 p-6">
-              <p className="text-sm uppercase tracking-[0.35em] text-emerald-700">Google map</p>
+              <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">Google map</p>
               <div className="mt-6 h-72 rounded-[28px] bg-slate-900/10 p-6 text-slate-500">
                 <p className="text-sm">Map placeholder for event venue planning.</p>
                 <p className="mt-4 text-sm">Add your live location once backend integration is ready.</p>
               </div>
             </div>
 
-            <div className="grid gap-4 rounded-[32px] bg-emerald-50 p-6">
+            <div className="grid gap-4 rounded-[32px] bg-[#eef4ea] p-6">
               <div>
-                <p className="text-sm uppercase tracking-[0.35em] text-emerald-700">Office address</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">Office address</p>
                 <p className="mt-3 text-slate-700">Marine Drive, Mumbai, India</p>
               </div>
               <div>
-                <p className="text-sm uppercase tracking-[0.35em] text-emerald-700">Email</p>
-                <p className="mt-3 text-slate-700">hello@emeraldevents.in</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">Email</p>
+                <p className="mt-3 text-slate-700">hello@whiteorchidevents.in</p>
               </div>
               <div>
-                <p className="text-sm uppercase tracking-[0.35em] text-emerald-700">Phone</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">Phone</p>
                 <p className="mt-3 text-slate-700">+91 81234 56789</p>
               </div>
             </div>

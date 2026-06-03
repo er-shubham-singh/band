@@ -18,7 +18,7 @@ function Gallery() {
     <div className="space-y-14">
       <section className="section-frame">
         <div className="text-center">
-          <p className="text-sm uppercase tracking-[0.35em] text-emerald-700">Gallery</p>
+          <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">Gallery</p>
           <h1 className="mt-4 text-4xl font-semibold text-slate-900 sm:text-5xl">Visual stories from premium weddings and events.</h1>
           <p className="mt-6 section-description">Explore our curated celebration imagery in a tactile masonry layout with refined filters and a lightbox preview.</p>
         </div>
@@ -32,7 +32,7 @@ function Gallery() {
               type="button"
               onClick={() => setActiveCategory(category)}
               className={`rounded-full px-5 py-2 text-sm font-semibold transition ${
-                activeCategory === category ? 'bg-emerald-600 text-white' : 'bg-white text-slate-700 shadow-sm shadow-slate-200'
+                activeCategory === category ? 'bg-[#1f5d44] text-white' : 'bg-white text-slate-700 shadow-sm shadow-slate-200'
               }`}
             >
               {category}
@@ -53,7 +53,7 @@ function Gallery() {
                 <img src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
                 <div className="absolute bottom-0 p-5 text-white">
-                  <p className="text-sm uppercase tracking-[0.35em] text-emerald-200">{item.category}</p>
+                  <p className="text-sm uppercase tracking-[0.35em] text-[#d9e8d8]">{item.category}</p>
                   <h3 className="mt-2 text-2xl font-semibold">{item.title}</h3>
                 </div>
               </div>
@@ -79,7 +79,7 @@ function Gallery() {
             </button>
             <img src={selected.image} alt={selected.title} className="h-[520px] w-full object-cover sm:h-[620px]" />
             <div className="space-y-3 p-8">
-              <p className="text-sm uppercase tracking-[0.35em] text-emerald-700">{selected.category}</p>
+              <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">{selected.category}</p>
               <h2 className="text-3xl font-semibold text-slate-900">{selected.title}</h2>
               <p className="text-slate-600">{selected.description}</p>
             </div>

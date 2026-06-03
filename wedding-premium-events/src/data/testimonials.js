@@ -2,7 +2,7 @@ const testimonials = [
   {
     name: 'Riya and Varun',
     location: 'Mumbai, India',
-    message: 'Emerald Events brought our wedding vision to life with elegance and calm professionalism. Every moment felt seamless and beautifully designed.'
+    message: 'White Orchid Events brought our wedding vision to life with elegance and calm professionalism. Every moment felt seamless and beautifully designed.'
   },
   {
     name: 'Asha and Rohit',

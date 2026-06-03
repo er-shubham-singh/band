@@ -3,10 +3,12 @@
 :root {
   color-scheme: light;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --brand: #16A34A;
-  --soft: #ecfdf5;
-  --glass: rgba(255,255,255,0.72);
-  --glass-border: rgba(255,255,255,0.24);
+  --brand: #1f5d44;
+  --brand-dark: #163f2d;
+  --accent: #c7a86e;
+  --soft: #f7f0e4;
+  --glass: rgba(255,255,255,0.88);
+  --glass-border: rgba(255,255,255,0.32);
 }
 
 html {
@@ -16,13 +18,13 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  background: radial-gradient(circle at top left, rgba(22,163,74,0.12), transparent 28%), linear-gradient(180deg, #ffffff 0%, #f1fdf3 100%);
+  background: linear-gradient(180deg, #fbf5ec 0%, #f2ede4 100%);
   color: #0f172a;
 }
 
 ::selection {
-  background: rgba(22,163,74,0.16);
-  color: #065f46;
+  background: rgba(31,93,68,0.18);
+  color: #0f172a;
 }
 
 #root {
@@ -31,13 +33,13 @@ body {
 
 .backdrop-glow {
   backdrop-filter: blur(18px);
-  background: rgba(255,255,255,0.64);
-  border: 1px solid rgba(255,255,255,0.28);
+  background: rgba(255,255,255,0.82);
+  border: 1px solid rgba(255,255,255,0.32);
   box-shadow: 0 30px 90px rgba(15,23,42,0.08);
 }
 
 .glass-card {
-  @apply rounded-[28px] border border-white/40 bg-white/55 shadow-[0_20px_70px_rgba(15,23,42,0.08)];
+  @apply rounded-[28px] border border-white/40 bg-white/80 shadow-[0_20px_70px_rgba(15,23,42,0.08)];
 }
 
 .section-frame {
@@ -53,15 +55,15 @@ body {
 }
 
 .button-primary {
-  @apply inline-flex items-center justify-center rounded-full bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/15 transition hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-200;
+  @apply inline-flex items-center justify-center rounded-full bg-[#1f5d44] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#1f5d4421] transition hover:bg-[#163f2d] focus:outline-none focus:ring-4 focus:ring-[#c7a86e33];
 }
 
 .button-secondary {
-  @apply inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-emerald-200 hover:text-emerald-700;
+  @apply inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-800 transition hover:border-[#1f5d44] hover:text-[#1f5d44];
 }
 
 .hero-bg {
-  background-image: radial-gradient(circle at 20% 15%, rgba(22,163,74,0.18), transparent 22%), radial-gradient(circle at 80% 10%, rgba(167,243,208,0.22), transparent 18%), radial-gradient(circle at 50% 100%, rgba(74,222,128,0.16), transparent 28%);
+  background: linear-gradient(135deg, rgba(247,240,228,0.92), rgba(238,244,233,0.9));
 }
 
 .masonry-grid {
@@ -83,4 +85,24 @@ body {
   .masonry-grid {
     column-count: 3;
   }
+}
+
+.brand-text {
+  color: var(--brand);
+}
+
+.brand-soft {
+  background-color: #eef4ea;
+}
+
+.brand-muted {
+  color: #4f7160;
+}
+
+.brand-strong {
+  color: #163f2d;
+}
+
+.brand-border {
+  border-color: rgba(31, 93, 68, 0.14);
 }

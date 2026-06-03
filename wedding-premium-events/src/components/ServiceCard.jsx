@@ -14,14 +14,14 @@ function ServiceCard({ service }) {
       </div>
       <div className="space-y-4 p-6">
         <div>
-          <p className="text-xs uppercase tracking-[0.35em] text-emerald-700 font-semibold">{service.category}</p>
+          <p className="text-xs uppercase tracking-[0.35em] text-[#1f5d44] font-semibold">{service.category}</p>
           <h3 className="mt-3 text-2xl font-semibold text-slate-900">{service.title}</h3>
         </div>
         <p className="text-sm leading-7 text-slate-600">{service.description}</p>
         <div className="space-y-3">
           {service.features.map((feature) => (
             <div key={feature} className="flex items-start gap-3 text-sm text-slate-700">
-              <FiCheckCircle className="mt-1 h-4 w-4 text-emerald-600 flex-shrink-0" />
+              <FiCheckCircle className="mt-1 h-4 w-4 text-[#1f5d44] flex-shrink-0" />
               <span>{feature}</span>
             </div>
           ))}

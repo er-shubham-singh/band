@@ -11,7 +11,7 @@ const highlights = [
 const timeline = [
   { year: '2017', title: 'First premium celebration', description: 'We launched with a mission to deliver elevated weddings and unforgettable events across Mumbai and beyond.' },
   { year: '2019', title: 'Expanded entertainment studio', description: 'Our team added signature musicians, decor designers, and celebration specialists for refined event execution.' },
-  { year: '2022', title: 'Nationwide planning', description: 'Emerald Events became the trusted partner for destination weddings, curated receptions, and luxe cultural ceremonies.' },
+  { year: '2022', title: 'Nationwide planning', description: 'White Orchid Events became the trusted partner for destination weddings, curated receptions, and luxe cultural ceremonies.' },
   { year: '2025', title: 'Luxury event curation', description: 'We launched a dedicated premium package lineup for bespoke weddings and high-profile celebrations.' }
 ]
 
@@ -21,17 +21,17 @@ function About() {
       <section className="section-frame">
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
-            <p className="text-sm uppercase tracking-[0.35em] text-emerald-700">About Emerald Events</p>
+            <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">About White Orchid Events</p>
             <h1 className="mt-4 text-4xl font-semibold text-slate-900 sm:text-5xl">A premium wedding and event partner with a meaningful touch.</h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">From intimate engagement celebrations to grand signature weddings, we build every experience around your story, your family, and the atmosphere you want to create.</p>
           </div>
           <div className="rounded-[40px] bg-white/85 p-8 shadow-[0_40px_90px_rgba(15,23,42,0.08)] sm:p-10">
-            <p className="text-sm uppercase tracking-[0.35em] text-emerald-700">Our promise</p>
+            <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">Our promise</p>
             <h2 className="mt-4 text-3xl font-semibold text-slate-900">Thoughtful planning, luxurious delivery.</h2>
             <ul className="mt-6 space-y-4 text-slate-600">
               {highlights.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-emerald-600" />
+                  <span className="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-[#1f5d44]" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -42,7 +42,7 @@ function About() {
 
       <section className="section-frame bg-slate-50">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm uppercase tracking-[0.35em] text-emerald-700">Our journey</p>
+          <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">Our journey</p>
           <h2 className="mt-4 text-3xl font-semibold text-slate-900 sm:text-4xl">A timeline of refined experiences.</h2>
           <p className="section-description">Each milestone has shaped our premium wedding services and event coordination philosophy.</p>
         </div>
@@ -58,7 +58,7 @@ function About() {
               className="glass-card p-8"
             >
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <p className="text-sm font-semibold uppercase tracking-[0.36em] text-emerald-700">{event.year}</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.36em] text-[#1f5d44]">{event.year}</p>
                 <h3 className="text-2xl font-semibold text-slate-900">{event.title}</h3>
               </div>
               <p className="mt-4 text-slate-600">{event.description}</p>
@@ -70,7 +70,7 @@ function About() {
       <section className="section-frame">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="text-sm uppercase tracking-[0.35em] text-emerald-700">Vision & Mission</p>
+            <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">Vision & Mission</p>
             <h2 className="mt-4 text-3xl font-semibold text-slate-900 sm:text-4xl">Designing celebrations that feel intentional, elevated, and effortless.</h2>
             <p className="mt-4 text-lg leading-8 text-slate-600">Our mission is to deliver premium wedding moments with expert coordination, polished aesthetics, and attention to every cultural detail.</p>
           </div>
@@ -91,7 +91,7 @@ function About() {
 
       <section className="section-frame bg-slate-50">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm uppercase tracking-[0.35em] text-emerald-700">Why choose us</p>
+          <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">Why choose us</p>
           <h2 className="mt-4 text-3xl font-semibold text-slate-900 sm:text-4xl">Premium care at every planning stage.</h2>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
