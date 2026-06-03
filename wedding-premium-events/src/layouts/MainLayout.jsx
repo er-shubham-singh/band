@@ -5,7 +5,7 @@ import React from 'react'
 
 function MainLayout() {
   return (
-    <div className="min-h-screen w-full bg-white">
+    <div className="min-h-screen w-full" style={{ background: 'var(--ivory)' }}>
       <Navbar />
       <main className="relative w-full overflow-x-hidden">
         <Outlet />

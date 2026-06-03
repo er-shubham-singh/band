@@ -1,26 +1,29 @@
-import { motion } from 'framer-motion'
-import { FaQuoteLeft } from 'react-icons/fa'
 import React from 'react'
 
 function TestimonialCard({ testimonial }) {
   return (
-    <motion.article
-      whileHover={{ y: -6 }}
-      transition={{ duration: 0.3, ease: 'easeOut' }}
-      className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-md"
-    >
-      <div className="flex items-center gap-3 text-[#1f5d44]">
-        <div className="rounded-full bg-[#eef4ea] p-3 text-[#1f5d44]">
-          <FaQuoteLeft className="h-4 w-4" />
+    <div className="card-royal p-6 flex flex-col gap-4">
+      <div className="flex items-center gap-1">
+        {[1,2,3,4,5].map(i => (
+          <span key={i} style={{ color: '#b8933f', fontSize: '0.85rem' }}>★</span>
+        ))}
+      </div>
+      <p className="text-sm leading-7 italic flex-1" style={{ color: 'var(--text-mid)', fontFamily: 'Cormorant Garamond, serif', fontSize: '1rem' }}>
+        "{testimonial.message}"
+      </p>
+      <div className="flex items-center gap-3 pt-3" style={{ borderTop: '1px solid rgba(184,147,63,0.15)' }}>
+        <div className="h-10 w-10 rounded-full flex items-center justify-center font-bold text-white flex-shrink-0"
+          style={{ background: 'linear-gradient(135deg,#9b1c1c,#7f1d1d)', fontFamily: 'Playfair Display,serif' }}>
+          {testimonial.name.charAt(0)}
         </div>
-        <p className="text-sm uppercase tracking-[0.32em] text-[#1f5d44] font-semibold">Client note</p>
+        <div>
+          <p className="text-sm font-semibold" style={{ color: 'var(--maroon)', fontFamily: 'Playfair Display,serif' }}>
+            {testimonial.name}
+          </p>
+          <p className="text-xs" style={{ color: 'var(--gold)' }}>{testimonial.location}</p>
+        </div>
       </div>
-      <p className="mt-6 text-slate-700 leading-relaxed">{testimonial.message}</p>
-      <div className="mt-6 border-t border-slate-200 pt-5 text-sm text-slate-600">
-        <p className="font-semibold text-slate-900">{testimonial.name}</p>
-        <p className="text-slate-500">{testimonial.location}</p>
-      </div>
-    </motion.article>
+    </div>
   )
 }
 

@@ -1,80 +1,177 @@
+import { motion } from 'framer-motion'
 import GallerySlider from '../components/GallerySlider'
 import Hero from '../components/Hero'
 import ServiceCard from '../components/ServiceCard'
 import TestimonialCard from '../components/TestimonialCard'
 import CTASection from '../components/CTASection'
+import AnimatedCounter from '../components/AnimatedCounter'
 import services from '../data/services'
 import galleryItems from '../data/gallery'
 import testimonials from '../data/testimonials'
 import React from 'react'
+
+const fadeInUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.65 } } }
+
+const stats = [
+  { value: 500, suffix: '+', label: 'Events Delivered' },
+  { value: 15, suffix: '+', label: 'Years of Legacy' },
+  { value: 98, suffix: '%', label: 'Happy Families' },
+  { value: 50, suffix: '+', label: 'Expert Artists' },
+]
 
 function Home() {
   return (
     <div className="w-full">
       <Hero />
 
-      <section className="w-full bg-white py-16 sm:py-24">
+      {/* Stats Counter Section */}
+      <section className="w-full py-16 sm:py-20"
+        style={{ background: 'linear-gradient(135deg, #9b1c1c 0%, #7f1d1d 50%, #4a0e0e 100%)' }}>
         <div className="section-frame">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm uppercase tracking-[0.36em] text-[#1f5d44] font-semibold">Signature offerings</p>
-            <h2 className="mt-4 text-3xl font-semibold text-slate-900 sm:text-4xl">Services built for meaningful celebrations.</h2>
-            <p className="mt-4 text-slate-600 text-lg">From live dhol parties to premium event coordination, our services combine tradition, luxury, and unforgettable design.</p>
-          </div>
-
-          <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-            {services.slice(0, 6).map((service) => (
-              <ServiceCard key={service.title} service={service} />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((stat) => (
+              <motion.div key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="text-center">
+                <p className="text-4xl sm:text-5xl font-bold text-white" style={{ fontFamily: 'Playfair Display,serif' }}>
+                  <AnimatedCounter end={stat.value} suffix={stat.suffix} duration={1800} />
+                </p>
+                <div className="h-0.5 w-10 mx-auto my-3" style={{ background: 'rgba(184,147,63,0.6)' }} />
+                <p className="text-xs sm:text-sm font-semibold tracking-widest uppercase"
+                  style={{ color: 'rgba(245,232,200,0.75)' }}>
+                  {stat.label}
+                </p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="w-full bg-slate-50 py-16 sm:py-24">
+      {/* Services */}
+      <section className="w-full py-16 sm:py-24" style={{ background: 'var(--ivory)' }}>
         <div className="section-frame">
-          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div>
-              <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44] font-semibold">Trusted by modern couples</p>
-              <h2 className="mt-4 text-3xl font-semibold text-slate-900 sm:text-4xl">A refined approach to wedding planning.</h2>
-              <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">We combine premium entertainment, flawless logistics, and elegant presentation so every detail feels effortless.</p>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-3">
-              {[
-                { value: '125+', label: 'Events curated' },
-                { value: '98%', label: 'Client satisfaction' },
-                { value: '24/7', label: 'Planning support' }
-              ].map((item) => (
-                <div key={item.label} className="rounded-[28px] border border-slate-200 bg-white p-6 text-center shadow-sm">
-                  <p className="text-4xl font-semibold text-[#1f5d44]">{item.value}</p>
-                  <p className="mt-2 text-sm uppercase tracking-[0.35em] text-slate-600 font-semibold">{item.label}</p>
-                </div>
-              ))}
-            </div>
+          <motion.div className="text-center mb-14" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+            <span className="section-label">Our Services</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold" style={{ fontFamily: 'Playfair Display,serif', color: 'var(--maroon)' }}>
+              Complete Wedding Entertainment
+            </h2>
+            <div className="gold-divider w-24 mx-auto mt-5" />
+            <p className="mt-5 text-lg max-w-2xl mx-auto" style={{ color: 'var(--text-mid)', fontWeight: 300 }}>
+              From Dhol to Shehnai, Ghori to Palki — every tradition honoured with precision and passion.
+            </p>
+          </motion.div>
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {services.slice(0, 6).map((service, i) => (
+              <motion.div key={service.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.55, delay: i * 0.07 }}>
+                <ServiceCard service={service} />
+              </motion.div>
+            ))}
+          </div>
+          <div className="mt-12 text-center">
+            <a href="/services" className="btn-outline">View All Services →</a>
           </div>
         </div>
       </section>
 
-      <section className="w-full bg-white py-16 sm:py-24">
+      {/* Why Us */}
+      <section className="w-full py-16 sm:py-24" style={{ background: 'var(--ivory-dark)' }}>
         <div className="section-frame">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44] font-semibold">Gallery preview</p>
-            <h2 className="mt-4 text-3xl font-semibold text-slate-900 sm:text-4xl">Moments from recent celebrations.</h2>
-          </div>
-          <div className="mt-10">
-            <GallerySlider items={galleryItems.slice(0, 6)} />
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+              <span className="section-label">Why Choose Us</span>
+              <h2 className="mt-3 text-3xl sm:text-4xl font-bold" style={{ fontFamily: 'Playfair Display,serif', color: 'var(--maroon)' }}>
+                A Legacy of Royal Wedding Celebrations
+              </h2>
+              <div className="gold-divider w-20 mt-4" />
+              <p className="mt-6 text-lg leading-8" style={{ color: 'var(--text-mid)', fontWeight: 300 }}>
+                With over 15 years of experience, we've mastered the art of Indian wedding entertainment. Our troupe of 50+ artists brings authenticity, energy, and precision to every celebration.
+              </p>
+              <ul className="mt-8 space-y-4">
+                {[
+                  'Traditional & contemporary performances',
+                  'Trained and professional artists',
+                  'Pan-India service with local expertise',
+                  'Custom packages for every budget',
+                  'Dedicated event coordinator assigned'
+                ].map(item => (
+                  <li key={item} className="flex items-center gap-3 text-sm font-medium" style={{ color: 'var(--text-mid)' }}>
+                    <span className="h-5 w-5 rounded-full flex items-center justify-center flex-shrink-0 text-xs"
+                      style={{ background: 'linear-gradient(135deg,#b8933f,#d4aa5a)', color: '#1a0a0a' }}>✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a href="/about" className="btn-gold mt-8 w-fit">Discover Our Story →</a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="relative">
+              <div className="overflow-hidden rounded-3xl"
+                style={{ boxShadow: '0 20px 60px rgba(155,28,28,0.2)', border: '2px solid rgba(184,147,63,0.2)' }}>
+                <img
+                  src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&w=900&q=85"
+                  alt="Dhol performance"
+                  className="w-full h-96 object-cover"
+                />
+              </div>
+              {/* Decorative offset box */}
+              <div className="absolute -bottom-6 -left-6 rounded-2xl p-5 hidden sm:block"
+                style={{ background: 'linear-gradient(135deg,#b8933f,#d4aa5a)', boxShadow: '0 8px 30px rgba(184,147,63,0.4)' }}>
+                <p className="text-xl font-bold" style={{ fontFamily: 'Playfair Display,serif', color: '#1a0a0a' }}>15+</p>
+                <p className="text-xs font-semibold" style={{ color: 'rgba(26,10,10,0.7)' }}>Years of<br/>Excellence</p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      <section className="w-full bg-slate-50 py-16 sm:py-24">
+      {/* Gallery Preview */}
+      <section className="w-full py-16 sm:py-24" style={{ background: 'var(--ivory)' }}>
         <div className="section-frame">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44] font-semibold">Client praise</p>
-            <h2 className="mt-4 text-3xl font-semibold text-slate-900 sm:text-4xl">Celebrations that continue to inspire.</h2>
+          <motion.div className="text-center mb-12" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+            <span className="section-label">Our Gallery</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold" style={{ fontFamily: 'Playfair Display,serif', color: 'var(--maroon)' }}>
+              Memories From Our Celebrations
+            </h2>
+            <div className="gold-divider w-24 mx-auto mt-5" />
+          </motion.div>
+          <GallerySlider items={galleryItems.slice(0, 6)} />
+          <div className="mt-10 text-center">
+            <a href="/gallery" className="btn-outline">View Full Gallery →</a>
           </div>
+        </div>
+      </section>
 
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {testimonials.slice(0, 3).map((item) => (
-              <TestimonialCard key={item.name} testimonial={item} />
+      {/* Testimonials */}
+      <section className="w-full py-16 sm:py-24" style={{ background: 'var(--ivory-dark)' }}>
+        <div className="section-frame">
+          <motion.div className="text-center mb-12" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+            <span className="section-label">Client Praise</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold" style={{ fontFamily: 'Playfair Display,serif', color: 'var(--maroon)' }}>
+              Families Who Trusted Us
+            </h2>
+            <div className="gold-divider w-24 mx-auto mt-5" />
+          </motion.div>
+          <div className="grid gap-6 lg:grid-cols-3">
+            {testimonials.slice(0, 3).map((item, i) => (
+              <motion.div key={item.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}>
+                <TestimonialCard testimonial={item} />
+              </motion.div>
             ))}
           </div>
         </div>

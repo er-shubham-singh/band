@@ -1,113 +1,109 @@
 import { motion } from 'framer-motion'
+import AnimatedCounter from '../components/AnimatedCounter'
+import CTASection from '../components/CTASection'
 import React from 'react'
 
-const highlights = [
-  'Curated design for meaningful ceremonies',
-  'Live ensemble coordination for weddings and receptions',
-  'Dhol, shehnai, ghori, baggi, and palki partnerships',
-  'Full event management from concept to celebration day'
-]
+const fadeInUp = { hidden: { opacity: 0, y: 28 }, visible: { opacity: 1, y: 0, transition: { duration: 0.65 } } }
 
-const timeline = [
-  { year: '2017', title: 'First premium celebration', description: 'We launched with a mission to deliver elevated weddings and unforgettable events across Mumbai and beyond.' },
-  { year: '2019', title: 'Expanded entertainment studio', description: 'Our team added signature musicians, decor designers, and celebration specialists for refined event execution.' },
-  { year: '2022', title: 'Nationwide planning', description: 'White Orchid Events became the trusted partner for destination weddings, curated receptions, and luxe cultural ceremonies.' },
-  { year: '2025', title: 'Luxury event curation', description: 'We launched a dedicated premium package lineup for bespoke weddings and high-profile celebrations.' }
+const team = [
+  { name: 'Ramesh Verma', role: 'Head Dhol Master', exp: '20 yrs' },
+  { name: 'Sunita Sharma', role: 'Event Coordinator', exp: '12 yrs' },
+  { name: 'Anil Gupta', role: 'Shehnai Maestro', exp: '18 yrs' },
+  { name: 'Priya Kapoor', role: 'Decor Director', exp: '10 yrs' }
 ]
 
 function About() {
   return (
-    <div className="space-y-16">
-      <section className="section-frame">
-        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <div>
-            <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">About White Orchid Events</p>
-            <h1 className="mt-4 text-4xl font-semibold text-slate-900 sm:text-5xl">A premium wedding and event partner with a meaningful touch.</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">From intimate engagement celebrations to grand signature weddings, we build every experience around your story, your family, and the atmosphere you want to create.</p>
-          </div>
-          <div className="rounded-[40px] bg-white/85 p-8 shadow-[0_40px_90px_rgba(15,23,42,0.08)] sm:p-10">
-            <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">Our promise</p>
-            <h2 className="mt-4 text-3xl font-semibold text-slate-900">Thoughtful planning, luxurious delivery.</h2>
-            <ul className="mt-6 space-y-4 text-slate-600">
-              {highlights.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-[#1f5d44]" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+    <div className="w-full">
+      {/* Hero */}
+      <section className="relative py-20 sm:py-28 overflow-hidden"
+        style={{ background: 'linear-gradient(135deg, #9b1c1c 0%, #7f1d1d 50%, #4a0e0e 100%)' }}>
+        <div className="absolute inset-0 opacity-5 pointer-events-none">
+          <svg width="100%" height="100%"><defs><pattern id="pg" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#f5e8c8"/></pattern></defs><rect width="100%" height="100%" fill="url(#pg)"/></svg>
+        </div>
+        <div className="section-frame relative text-center">
+          <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
+            <span className="section-label" style={{ color: 'rgba(245,232,200,0.7)' }}>Our Story</span>
+            <h1 className="mt-4 text-4xl sm:text-5xl font-bold text-white" style={{ fontFamily: 'Playfair Display,serif' }}>
+              About White Orchid Events
+            </h1>
+            <div className="h-0.5 w-24 mx-auto mt-5 mb-6" style={{ background: 'rgba(184,147,63,0.6)' }} />
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: 'rgba(255,255,255,0.7)', fontWeight: 300 }}>
+              Rooted in tradition, elevated by passion — we've been India's most trusted wedding entertainment partner for over 15 years.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      <section className="section-frame bg-slate-50">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">Our journey</p>
-          <h2 className="mt-4 text-3xl font-semibold text-slate-900 sm:text-4xl">A timeline of refined experiences.</h2>
-          <p className="section-description">Each milestone has shaped our premium wedding services and event coordination philosophy.</p>
-        </div>
-
-        <div className="mt-12 space-y-8">
-          {timeline.map((event, index) => (
-            <motion.div
-              key={event.year}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.25 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-card p-8"
-            >
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <p className="text-sm font-semibold uppercase tracking-[0.36em] text-[#1f5d44]">{event.year}</p>
-                <h3 className="text-2xl font-semibold text-slate-900">{event.title}</h3>
-              </div>
-              <p className="mt-4 text-slate-600">{event.description}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      <section className="section-frame">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div>
-            <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">Vision & Mission</p>
-            <h2 className="mt-4 text-3xl font-semibold text-slate-900 sm:text-4xl">Designing celebrations that feel intentional, elevated, and effortless.</h2>
-            <p className="mt-4 text-lg leading-8 text-slate-600">Our mission is to deliver premium wedding moments with expert coordination, polished aesthetics, and attention to every cultural detail.</p>
-          </div>
-          <div className="rounded-[40px] border border-white/70 bg-white/70 p-8 shadow-[0_40px_90px_rgba(15,23,42,0.08)]">
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900">Vision</h3>
-                <p className="mt-3 text-slate-600">To be the destination for couples seeking premium wedding design, unforgettable music, and ceremony excellence.</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900">Mission</h3>
-                <p className="mt-3 text-slate-600">To craft personalized celebrations by combining luxury rentals, cultural artistry, and care-focused coordination for every occasion.</p>
-              </div>
+      {/* Story */}
+      <section className="py-16 sm:py-24" style={{ background: 'var(--ivory)' }}>
+        <div className="section-frame grid gap-14 lg:grid-cols-2 lg:items-center">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+            <span className="section-label">Who We Are</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold" style={{ fontFamily: 'Playfair Display,serif', color: 'var(--maroon)' }}>
+              15 Years of Crafting Royal Weddings
+            </h2>
+            <div className="gold-divider w-20 mt-4" />
+            <p className="mt-6 text-base leading-8" style={{ color: 'var(--text-mid)', fontWeight: 300 }}>
+              White Orchid Events was founded with a single mission: to make every wedding feel like a royal celebration. Starting with a small dhol troupe in Mumbai, we've grown into a full-service wedding entertainment company with 50+ artists serving families across India.
+            </p>
+            <p className="mt-4 text-base leading-8" style={{ color: 'var(--text-mid)', fontWeight: 300 }}>
+              We deeply respect Indian wedding traditions — the energy of a Baraat, the soul of Shehnai at a mandap, the grandeur of a Ghori procession. Every service we offer is designed to honour these traditions while creating modern, unforgettable moments.
+            </p>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
+            <div className="overflow-hidden rounded-3xl" style={{ boxShadow: '0 20px 60px rgba(155,28,28,0.18)', border: '2px solid rgba(184,147,63,0.2)' }}>
+              <img src="https://images.unsplash.com/photo-1514412076814-7cd65a1b74c5?auto=format&w=900&q=80" alt="Wedding team" className="w-full h-96 object-cover"/>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      <section className="section-frame bg-slate-50">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">Why choose us</p>
-          <h2 className="mt-4 text-3xl font-semibold text-slate-900 sm:text-4xl">Premium care at every planning stage.</h2>
-        </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {[
-            { title: 'Signature coordination', description: 'A dedicated event specialist delivers every timeline, vendor detail, and guest touchpoint.' },
-            { title: 'Luxurious entertainment', description: 'Curated wedding bands, dhol teams, and ceremony ensembles for an elevated atmosphere.' },
-            { title: 'Detailed styling', description: 'Refined decor, draping, floral concepts, and ceremony staging to reflect your story.' },
-            { title: 'On-site excellence', description: 'Premium hospitality and rehearsal management for calm, joyful event days.' }
-          ].map((item) => (
-            <div key={item.title} className="glass-card p-6">
-              <h3 className="text-xl font-semibold text-slate-900">{item.title}</h3>
-              <p className="mt-3 text-slate-600">{item.description}</p>
+      {/* Stats */}
+      <section className="py-16 sm:py-20" style={{ background: 'linear-gradient(135deg,#9b1c1c,#4a0e0e)' }}>
+        <div className="section-frame grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          {[{ v: 500, s: '+', l: 'Events' }, { v: 15, s: '+', l: 'Years' }, { v: 50, s: '+', l: 'Artists' }, { v: 20, s: '+', l: 'Cities' }].map(stat => (
+            <div key={stat.l}>
+              <p className="text-4xl font-bold text-white" style={{ fontFamily: 'Playfair Display,serif' }}>
+                <AnimatedCounter end={stat.v} suffix={stat.s} />
+              </p>
+              <div className="h-0.5 w-8 mx-auto my-2" style={{ background: 'rgba(184,147,63,0.5)' }} />
+              <p className="text-xs uppercase tracking-widest" style={{ color: 'rgba(245,232,200,0.7)' }}>{stat.l}</p>
             </div>
           ))}
         </div>
       </section>
+
+      {/* Team */}
+      <section className="py-16 sm:py-24" style={{ background: 'var(--ivory-dark)' }}>
+        <div className="section-frame">
+          <motion.div className="text-center mb-12" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+            <span className="section-label">Our Team</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold" style={{ fontFamily: 'Playfair Display,serif', color: 'var(--maroon)' }}>
+              The Artists Behind the Magic
+            </h2>
+            <div className="gold-divider w-24 mx-auto mt-4" />
+          </motion.div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {team.map((t, i) => (
+              <motion.div key={t.name}
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="card-royal p-6 text-center">
+                <div className="h-16 w-16 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold text-white"
+                  style={{ background: 'linear-gradient(135deg,#9b1c1c,#7f1d1d)', fontFamily: 'Playfair Display,serif' }}>
+                  {t.name.charAt(0)}
+                </div>
+                <p className="font-bold" style={{ fontFamily: 'Playfair Display,serif', color: 'var(--maroon)' }}>{t.name}</p>
+                <p className="text-xs mt-1" style={{ color: 'var(--gold)' }}>{t.role}</p>
+                <p className="text-xs mt-1" style={{ color: 'var(--text-mid)' }}>{t.exp} experience</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CTASection />
     </div>
   )
 }

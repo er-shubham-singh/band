@@ -1,49 +1,100 @@
-import { FiMail, FiPhoneCall } from 'react-icons/fi'
-import { RiInstagramLine, RiFacebookLine, RiTwitterLine } from 'react-icons/ri'
+import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi'
+import { RiInstagramLine, RiFacebookLine, RiYoutubeLine, RiWhatsappLine } from 'react-icons/ri'
 import React from 'react'
+
+const links = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Services', href: '/services' },
+  { label: 'Gallery', href: '/gallery' },
+  { label: 'Packages', href: '/packages' },
+  { label: 'Contact', href: '/contact' }
+]
 
 function Footer() {
   return (
-    <footer className="border-t border-white/70 bg-white/80 pt-12 pb-8 backdrop-blur-xl">
-      <div className="section-frame grid gap-10 lg:grid-cols-[1.2fr_0.8fr] xl:gap-16">
-        <div>
-          <p className="text-sm uppercase tracking-[0.4em] text-[#1f5d44]">White Orchid Events</p>
-          <h2 className="mt-4 text-3xl font-semibold text-slate-900 sm:text-4xl">Crafting timeless celebrations with premium wedding experiences.</h2>
-          <p className="mt-4 max-w-2xl text-slate-600">From curated ceremonies to full-scale event design, our team delivers refined hospitality, live entertainment, and unforgettable moments across every milestone.</p>
-        </div>
+    <footer style={{ background: 'linear-gradient(160deg,#1a0a0a 0%,#2a0e0e 100%)', color: 'rgba(255,255,255,0.85)' }}>
+      <div className="section-frame pt-16 pb-10">
+        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr]">
+          {/* Brand */}
+          <div>
+            <div className="flex items-center gap-3 mb-5">
+              <div className="h-12 w-12 rounded-full flex items-center justify-center flex-shrink-0"
+                style={{ background: 'linear-gradient(135deg,#9b1c1c,#7f1d1d)' }}>
+                <span className="text-xl font-bold" style={{ color: '#f5e8c8', fontFamily: 'Playfair Display,serif' }}>W</span>
+              </div>
+              <div>
+                <p className="font-bold text-lg text-white" style={{ fontFamily: 'Playfair Display,serif' }}>White Orchid Events</p>
+                <p className="text-xs tracking-widest" style={{ color: 'var(--gold)', opacity: 0.8 }}>PREMIUM WEDDING ENTERTAINMENT</p>
+              </div>
+            </div>
+            <p className="text-sm leading-7" style={{ color: 'rgba(255,255,255,0.55)', maxWidth: 280 }}>
+              From Dhol parties to royal Baraat processions, we bring your wedding celebrations to life with tradition, energy, and elegance.
+            </p>
+            <div className="flex items-center gap-3 mt-6">
+              {[
+                { icon: RiFacebookLine, label: 'Facebook' },
+                { icon: RiInstagramLine, label: 'Instagram' },
+                { icon: RiYoutubeLine, label: 'YouTube' },
+                { icon: RiWhatsappLine, label: 'WhatsApp' }
+              ].map(({ icon: Icon, label }) => (
+                <a key={label} href="#" aria-label={label}
+                  className="h-9 w-9 flex items-center justify-center rounded-full transition-all"
+                  style={{ background: 'rgba(255,255,255,0.07)', color: 'rgba(255,255,255,0.6)', border: '1px solid rgba(255,255,255,0.1)' }}
+                  onMouseOver={e => { e.currentTarget.style.background = 'var(--gold)'; e.currentTarget.style.color = '#1a0a0a' }}
+                  onMouseOut={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.07)'; e.currentTarget.style.color = 'rgba(255,255,255,0.6)' }}>
+                  <Icon className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
+          </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 sm:gap-8">
-          <div className="rounded-[28px] bg-slate-950/5 p-6 shadow-[0_28px_70px_rgba(15,23,42,0.06)]">
-            <p className="text-sm uppercase tracking-[0.24em] text-slate-500">Contact</p>
-            <div className="mt-6 space-y-4 text-sm text-slate-700">
-              <div className="flex items-center gap-3">
-                <FiPhoneCall className="h-5 w-5 text-[#1f5d44]" />
+          {/* Quick Links */}
+          <div>
+            <p className="text-xs font-semibold tracking-[0.22em] uppercase mb-5" style={{ color: 'var(--gold)' }}>Quick Links</p>
+            <ul className="space-y-3">
+              {links.map(l => (
+                <li key={l.href}>
+                  <a href={l.href} className="text-sm flex items-center gap-2 transition-colors"
+                    style={{ color: 'rgba(255,255,255,0.55)' }}
+                    onMouseOver={e => e.currentTarget.style.color = '#f5e8c8'}
+                    onMouseOut={e => e.currentTarget.style.color = 'rgba(255,255,255,0.55)'}>
+                    <span style={{ color: 'var(--gold)', fontSize: '0.5rem' }}>✦</span> {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <p className="text-xs font-semibold tracking-[0.22em] uppercase mb-5" style={{ color: 'var(--gold)' }}>Contact Us</p>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                <FiPhone className="h-4 w-4 flex-shrink-0 mt-0.5" style={{ color: 'var(--gold)' }} />
                 <span>+91 81234 56789</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <FiMail className="h-5 w-5 text-[#1f5d44]" />
+              </li>
+              <li className="flex items-start gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                <FiMail className="h-4 w-4 flex-shrink-0 mt-0.5" style={{ color: 'var(--gold)' }} />
                 <span>hello@whiteorchidevents.in</span>
-              </div>
-              <p className="text-slate-500">Mumbai, India • Nationwide Services</p>
-            </div>
-          </div>
-
-          <div className="rounded-[28px] bg-slate-950/5 p-6 shadow-[0_28px_70px_rgba(15,23,42,0.06)]">
-            <p className="text-sm uppercase tracking-[0.24em] text-slate-500">Follow us</p>
-            <div className="mt-6 flex items-center gap-3 text-[#1f5d44]">
-              <a href="#" className="rounded-2xl border border-slate-200 bg-white p-3 shadow-sm shadow-slate-200/50 transition hover:bg-[#eef4ea]"><RiFacebookLine className="h-5 w-5" /></a>
-              <a href="#" className="rounded-2xl border border-slate-200 bg-white p-3 shadow-sm shadow-slate-200/50 transition hover:bg-[#eef4ea]"><RiInstagramLine className="h-5 w-5" /></a>
-              <a href="#" className="rounded-2xl border border-slate-200 bg-white p-3 shadow-sm shadow-slate-200/50 transition hover:bg-[#eef4ea]"><RiTwitterLine className="h-5 w-5" /></a>
-            </div>
-            <p className="mt-6 text-sm text-slate-500">Your next celebration deserves a refined partner with a polished approach.</p>
+              </li>
+              <li className="flex items-start gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                <FiMapPin className="h-4 w-4 flex-shrink-0 mt-0.5" style={{ color: 'var(--gold)' }} />
+                <span>Serving Pan India — Mumbai, Delhi, Pune & beyond</span>
+              </li>
+            </ul>
+            <a href="https://wa.me/918123456789"
+              className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all"
+              style={{ background: '#25d366', color: 'white', boxShadow: '0 4px 16px rgba(37,211,102,0.3)' }}>
+              <RiWhatsappLine className="h-4 w-4" /> Chat on WhatsApp
+            </a>
           </div>
         </div>
-      </div>
 
-      <div className="mt-10 border-t border-slate-200/80 pt-6 text-sm text-slate-500">
-        <div className="section-frame flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <hr style={{ borderColor: 'rgba(255,255,255,0.08)', margin: '3rem 0 1.5rem' }} />
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>
           <p>© 2026 White Orchid Events. All rights reserved.</p>
-          <p>Designed for premium weddings, luxury ceremonies, and unforgettable experiences.</p>
+          <p>✦ Designed for Timeless Indian Weddings ✦</p>
         </div>
       </div>
     </footer>

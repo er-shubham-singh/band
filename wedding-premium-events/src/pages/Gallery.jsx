@@ -1,91 +1,58 @@
-import { useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import galleryItems from '../data/gallery'
+import CTASection from '../components/CTASection'
 import React from 'react'
 
-const categories = ['All', 'Ceremony', 'Reception', 'Portraits', 'Decor']
-
 function Gallery() {
-  const [activeCategory, setActiveCategory] = useState('All')
-  const [selected, setSelected] = useState(null)
-
-  const filtered = useMemo(
-    () => (activeCategory === 'All' ? galleryItems : galleryItems.filter((item) => item.category === activeCategory)),
-    [activeCategory]
-  )
-
   return (
-    <div className="space-y-14">
-      <section className="section-frame">
-        <div className="text-center">
-          <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">Gallery</p>
-          <h1 className="mt-4 text-4xl font-semibold text-slate-900 sm:text-5xl">Visual stories from premium weddings and events.</h1>
-          <p className="mt-6 section-description">Explore our curated celebration imagery in a tactile masonry layout with refined filters and a lightbox preview.</p>
+    <div className="w-full">
+      <section className="relative py-20 sm:py-28" style={{ background: 'linear-gradient(135deg,#9b1c1c,#4a0e0e)' }}>
+        <div className="section-frame text-center">
+          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+            <span className="section-label" style={{ color: 'rgba(245,232,200,0.7)' }}>Memories</span>
+            <h1 className="mt-4 text-4xl sm:text-5xl font-bold text-white" style={{ fontFamily: 'Playfair Display,serif' }}>
+              Our Celebration Gallery
+            </h1>
+            <div className="h-0.5 w-24 mx-auto mt-5 mb-6" style={{ background: 'rgba(184,147,63,0.6)' }} />
+            <p className="text-lg max-w-xl mx-auto" style={{ color: 'rgba(255,255,255,0.7)', fontWeight: 300 }}>
+              Moments we've had the privilege of being part of — from grand Baraats to intimate ceremonies.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      <section className="section-frame">
-        <div className="flex flex-wrap items-center justify-center gap-3">
-          {categories.map((category) => (
-            <button
-              key={category}
-              type="button"
-              onClick={() => setActiveCategory(category)}
-              className={`rounded-full px-5 py-2 text-sm font-semibold transition ${
-                activeCategory === category ? 'bg-[#1f5d44] text-white' : 'bg-white text-slate-700 shadow-sm shadow-slate-200'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-
-        <div className="mt-10 masonry-grid">
-          {filtered.map((item) => (
-            <motion.button
-              key={item.title}
-              type="button"
-              whileHover={{ scale: 1.02 }}
-              onClick={() => setSelected(item)}
-              className="masonry-item group w-full overflow-hidden rounded-4xl border border-white/70 bg-white/80 p-0 text-left shadow-[0_35px_90px_rgba(15,23,42,0.06)]"
-            >
-              <div className="relative h-96 overflow-hidden">
-                <img src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-linear-to-t from-slate-950/80 to-transparent" />
-                <div className="absolute bottom-0 p-5 text-white">
-                  <p className="text-sm uppercase tracking-[0.35em] text-[#d9e8d8]">{item.category}</p>
-                  <h3 className="mt-2 text-2xl font-semibold">{item.title}</h3>
-                </div>
-              </div>
-            </motion.button>
-          ))}
-        </div>
-      </section>
-
-      {selected && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 p-4"
-        >
-          <div className="relative max-w-5xl overflow-hidden rounded-4xl bg-white shadow-[0_40px_120px_rgba(15,23,42,0.3)]">
-            <button
-              type="button"
-              onClick={() => setSelected(null)}
-              className="absolute right-4 top-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white text-slate-900 shadow-lg shadow-slate-900/10"
-            >
-              ✕
-            </button>
-            <img src={selected.image} alt={selected.title} className="h-130 w-full object-cover sm:h-155" />
-            <div className="space-y-3 p-8">
-              <p className="text-sm uppercase tracking-[0.35em] text-[#1f5d44]">{selected.category}</p>
-              <h2 className="text-3xl font-semibold text-slate-900">{selected.title}</h2>
-              <p className="text-slate-600">{selected.description}</p>
-            </div>
+      <section className="py-16 sm:py-24" style={{ background: 'var(--ivory)' }}>
+        <div className="section-frame">
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-5">
+            {galleryItems.map((item, i) => (
+              <motion.div key={i}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.04 }}
+                className="break-inside-avoid mb-5 group overflow-hidden rounded-2xl relative cursor-pointer"
+                style={{ border: '1px solid rgba(184,147,63,0.15)', boxShadow: '0 4px 20px rgba(155,28,28,0.07)' }}>
+                <img
+                  src={item.image}
+                  alt={item.caption || `Gallery ${i+1}`}
+                  className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  style={{ maxHeight: i % 3 === 1 ? 320 : 220 }}
+                />
+                {item.caption && (
+                  <div className="absolute inset-0 flex items-end opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{ background: 'linear-gradient(0deg,rgba(74,14,14,0.7) 0%,transparent 55%)' }}>
+                    <p className="p-4 text-white text-sm font-medium" style={{ fontFamily: 'Playfair Display,serif' }}>
+                      {item.caption}
+                    </p>
+                  </div>
+                )}
+              </motion.div>
+            ))}
           </div>
-        </motion.div>
-      )}
+        </div>
+      </section>
+
+      <CTASection />
     </div>
   )
 }

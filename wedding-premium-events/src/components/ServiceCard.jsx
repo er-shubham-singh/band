@@ -1,36 +1,47 @@
-import { motion } from 'framer-motion'
-import { FiCheckCircle } from 'react-icons/fi'
 import React from 'react'
 
 function ServiceCard({ service }) {
   return (
-    <motion.article
-      whileHover={{ y: -8 }}
-      transition={{ duration: 0.3, ease: 'easeOut' }}
-      className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-md"
-    >
-      <div className="relative h-56 overflow-hidden bg-slate-100">
-        <img src={service.image} alt={service.title} className="h-full w-full object-cover transition duration-500 hover:scale-105" />
-      </div>
-      <div className="space-y-4 p-6">
-        <div>
-          <p className="text-xs uppercase tracking-[0.35em] text-[#1f5d44] font-semibold">{service.category}</p>
-          <h3 className="mt-3 text-2xl font-semibold text-slate-900">{service.title}</h3>
+    <div className="card-royal group overflow-hidden flex flex-col">
+      <div className="relative overflow-hidden h-52">
+        <img
+          src={service.image}
+          alt={service.title}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-70"
+          style={{ background: 'linear-gradient(0deg, rgba(74,14,14,0.6) 0%, transparent 55%)' }} />
+        <div className="absolute top-3 left-3">
+          <span className="px-3 py-1 rounded-full text-xs font-semibold"
+            style={{ background: 'linear-gradient(135deg,#b8933f,#d4aa5a)', color: '#1a0a0a' }}>
+            {service.category}
+          </span>
         </div>
-        <p className="text-sm leading-7 text-slate-600">{service.description}</p>
-        <div className="space-y-3">
-          {service.features.map((feature) => (
-            <div key={feature} className="flex items-start gap-3 text-sm text-slate-700">
-              <FiCheckCircle className="mt-1 h-4 w-4 text-[#1f5d44] shrink-0" />
-              <span>{feature}</span>
-            </div>
+        <div className="absolute bottom-3 left-4">
+          <p className="text-white font-bold text-lg" style={{ fontFamily: 'Playfair Display,serif', opacity: 0.95 }}>
+            {service.title}
+          </p>
+        </div>
+      </div>
+      <div className="p-6 flex flex-col flex-1">
+        <p className="text-sm leading-relaxed flex-1" style={{ color: 'var(--text-mid)' }}>
+          {service.description}
+        </p>
+        <ul className="mt-4 space-y-1.5">
+          {service.features.slice(0,3).map((f) => (
+            <li key={f} className="flex items-center gap-2 text-xs" style={{ color: '#5c3a2a' }}>
+              <span style={{ color: 'var(--gold)' }}>✦</span> {f}
+            </li>
           ))}
+        </ul>
+        <div className="mt-5 pt-4" style={{ borderTop: '1px solid rgba(184,147,63,0.15)' }}>
+          <a href="/contact" className="text-sm font-semibold flex items-center gap-1 transition-all"
+            style={{ color: 'var(--crimson)' }}>
+            Book this service <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
+          </a>
         </div>
-        <a href="#contact" className="button-primary w-full text-center">
-          Book this service
-        </a>
       </div>
-    </motion.article>
+    </div>
   )
 }
 
