@@ -200,50 +200,49 @@ function Hero() {
                 </a>
               )}
             </div>
+
+            {/* Dot indicators below buttons */}
+            <div className="mt-8 flex items-center justify-center gap-2">
+              {sliderItems.map((_, index) => {
+                const isActive = activeSlide === index
+                return (
+                  <button
+                    key={index}
+                    onClick={() => setActiveSlide(index)}
+                    aria-label={`Slide ${index + 1}`}
+                    style={{
+                      height: 16,
+                      width: 16,
+                      borderRadius: '50%',
+                      background: isActive
+                        ? `conic-gradient(#b8933f ${slideProgress}%, rgba(255,255,255,0.25) ${slideProgress}% 100%)`
+                        : 'rgba(255,255,255,0.2)',
+                      border: isActive ? '1px solid rgba(255,255,255,0.95)' : '1px solid rgba(255,255,255,0.3)',
+                      padding: 0,
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease',
+                      outline: 'none',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <span
+                      style={{
+                        height: 8,
+                        width: 8,
+                        borderRadius: '50%',
+                        background: isActive ? '#1a0a0a' : '#fff',
+                        opacity: isActive ? 0.95 : 0.8,
+                      }}
+                    />
+                  </button>
+                )
+              })}
+            </div>
           </div>
         </div>
       ))}
-
-      {/* Dot indicators */}
-      <div className="absolute bottom-7 flex items-center gap-2" style={{ left: '6%', zIndex: 10 }}>
-        {sliderItems.map((_, index) => {
-          const isActive = activeSlide === index
-          return (
-            <button
-              key={index}
-              onClick={() => setActiveSlide(index)}
-              aria-label={`Slide ${index + 1}`}
-              style={{
-                position: 'relative',
-                height: 16,
-                width: 16,
-                borderRadius: '50%',
-                background: isActive
-                  ? `conic-gradient(#b8933f ${slideProgress}%, rgba(255,255,255,0.25) ${slideProgress}% 100%)`
-                  : 'rgba(255,255,255,0.2)',
-                border: isActive ? '1px solid rgba(255,255,255,0.95)' : '1px solid rgba(255,255,255,0.3)',
-                padding: 0,
-                cursor: 'pointer',
-                transition: 'all 0.3s ease',
-                outline: 'none',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              <span
-                style={{
-                  height: 8,
-                  width: 8,
-                  borderRadius: '50%',
-                  background: isActive ? '#1a0a0a' : '#fff',
-                  opacity: isActive ? 0.95 : 0.8,
-                }}
-              />
-            </button>
-          )
-        })}
-      </div>
 
       {/* Stats strip — bottom right */}
       <div className="absolute bottom-0 right-0 flex" style={{ zIndex: 10 }}>

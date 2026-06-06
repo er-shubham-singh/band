@@ -5,11 +5,35 @@ import { useState } from 'react'
 import React from 'react'
 
 function Contact() {
-  const [form, setForm] = useState({ name: '', phone: '', email: '', service: '', message: '' })
+  const [form, setForm] = useState({ name: '', mobile: '', message: '' })
   const [sent, setSent] = useState(false)
+  const [error, setError] = useState('')
 
   const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value })
-  const handleSubmit = e => { e.preventDefault(); setSent(true) }
+  const handleSubmit = async e => {
+    e.preventDefault()
+    setError('')
+
+    try {
+      const res = await fetch('https://formspree.io/f/meewevwl', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+          headers: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+  },
+        body: JSON.stringify({ name: form.name, mobile: form.mobile, message: form.message })
+      })
+      if (res.ok) {
+        setSent(true)
+        setForm({ name: '', mobile: '', message: '' })
+      } else {
+        setError('Unable to send inquiry. Please try again later.')
+      }
+    } catch (err) {
+      setError('Unable to send inquiry. Please check your connection and try again.')
+    }
+  }
 
   return (
     <div className="w-full">
@@ -78,8 +102,7 @@ function Contact() {
                 </h3>
                 {[
                   { name: 'name', label: 'Your Name', type: 'text', placeholder: 'Rahul & Priya' },
-                  { name: 'phone', label: 'Phone Number', type: 'tel', placeholder: '+91 98765 43210' },
-                  { name: 'email', label: 'Email Address', type: 'email', placeholder: 'you@example.com' }
+                  { name: 'mobile', label: 'Mobile Number', type: 'tel', placeholder: '+91 98765 43210' }
                 ].map(field => (
                   <div key={field.name}>
                     <label className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: 'var(--gold)' }}>
@@ -93,23 +116,6 @@ function Contact() {
                       onBlur={e => e.target.style.borderColor = 'rgba(184,147,63,0.2)'} />
                   </div>
                 ))}
-                <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: 'var(--gold)' }}>
-                    Service Interested In
-                  </label>
-                  <select name="service" value={form.service} onChange={handleChange}
-                    className="w-full rounded-xl px-4 py-3 text-sm outline-none transition-all"
-                    style={{ border: '1px solid rgba(184,147,63,0.2)', background: 'var(--ivory)', color: 'var(--text-dark)' }}>
-                    <option value="">Select a service...</option>
-                    <option>Wedding Band</option>
-                    <option>Punjabi Dhol</option>
-                    <option>Ghori Service</option>
-                    <option>Baggi Service</option>
-                    <option>Palki Service</option>
-                    <option>Shehnai Performance</option>
-                    <option>Full Package</option>
-                  </select>
-                </div>
                 <div>
                   <label className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: 'var(--gold)' }}>
                     Message
