@@ -38,14 +38,14 @@ function Navbar() {
           <NavLink to="/" className="flex items-center gap-3 group">
             <div className="relative h-11 w-11 flex items-center justify-center rounded-full overflow-hidden"
               style={{ background: 'linear-gradient(135deg, #9b1c1c, #7f1d1d)', boxShadow: '0 4px 14px rgba(155,28,28,0.3)' }}>
-              <span className="text-amber-300 font-bold text-lg" style={{ fontFamily: 'Playfair Display, serif' }}>W</span>
+              <img src="/logo.jpeg" alt="Great Popular Band logo" className="h-full w-full object-cover" />
             </div>
             <div className="hidden sm:block">
-              <p className="text-xs tracking-[0.22em] uppercase font-semibold" style={{ color: 'var(--gold)' }}>White Orchid</p>
-              <p className="text-sm font-semibold" style={{ color: 'var(--text-dark)', fontFamily: 'Playfair Display, serif' }}>Events</p>
+              <p className="text-xs tracking-[0.22em] uppercase font-semibold" style={{ color: 'var(--gold)' }}>Great Popular</p>
+              <p className="text-sm font-semibold" style={{ color: 'var(--text-dark)', fontFamily: 'Playfair Display, serif' }}>Band</p>
             </div>
             <div className="sm:hidden">
-              <p className="text-base font-bold" style={{ color: 'var(--maroon)', fontFamily: 'Playfair Display, serif' }}>White Orchid Events</p>
+              <p className="text-base font-bold" style={{ color: 'var(--maroon)', fontFamily: 'Playfair Display, serif' }}>Great Popular Band</p>
             </div>
           </NavLink>
 
@@ -117,11 +117,11 @@ function Navbar() {
         <div className="flex items-center justify-between px-6 py-5"
           style={{ borderBottom: '1px solid rgba(184,147,63,0.15)' }}>
           <div className="flex items-center gap-2.5">
-            <div className="h-8 w-8 rounded-full flex items-center justify-center"
+            <div className="h-8 w-8 rounded-full flex items-center justify-center overflow-hidden"
               style={{ background: 'linear-gradient(135deg,#9b1c1c,#7f1d1d)' }}>
-              <span style={{ color: '#f5e8c8', fontFamily: 'Playfair Display,serif', fontWeight: 700, fontSize: '0.85rem' }}>W</span>
+              <img src="/logo.jpeg" alt="Great Popular Band logo" className="h-full w-full object-cover" />
             </div>
-            <span style={{ fontFamily: 'Playfair Display,serif', fontWeight: 600, color: 'var(--maroon)', fontSize: '0.95rem' }}>White Orchid</span>
+            <span style={{ fontFamily: 'Playfair Display,serif', fontWeight: 600, color: 'var(--maroon)', fontSize: '0.95rem' }}>Great Popular Band</span>
           </div>
           <button
             onClick={() => setOpen(false)}

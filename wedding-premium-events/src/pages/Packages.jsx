@@ -44,13 +44,13 @@ function Packages() {
         style={{ background: 'linear-gradient(135deg,#9b1c1c,#4a0e0e)' }}>
         <div className="section-frame relative text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <span className="section-label" style={{ color: 'rgba(245,232,200,0.7)' }}>Pricing</span>
+            <span className="section-label" style={{ color: 'rgba(245,232,200,0.7)' }}>Choose Your Package</span>
             <h1 className="mt-4 text-4xl sm:text-5xl font-bold text-white" style={{ fontFamily: 'Playfair Display,serif' }}>
-              Wedding Packages
+              Choose Your Perfect Wedding Package
             </h1>
             <div className="h-0.5 w-24 mx-auto mt-5 mb-6" style={{ background: 'rgba(184,147,63,0.6)' }} />
             <p className="text-lg max-w-2xl mx-auto" style={{ color: 'rgba(255,255,255,0.7)', fontWeight: 300 }}>
-              Choose the perfect package for your celebration. All packages include a dedicated coordinator.
+              From intimate celebrations to extravagant royal processions, we offer customized packages designed to match every wedding style and budget.
             </p>
           </motion.div>
         </div>

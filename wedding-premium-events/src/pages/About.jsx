@@ -23,13 +23,13 @@ function About() {
         </div>
         <div className="section-frame relative text-center">
           <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
-            <span className="section-label" style={{ color: 'rgba(245,232,200,0.7)' }}>Our Story</span>
+            <span className="section-label" style={{ color: 'rgba(245,232,200,0.7)' }}>About Us</span>
             <h1 className="mt-4 text-4xl sm:text-5xl font-bold text-white" style={{ fontFamily: 'Playfair Display,serif' }}>
-              About White Orchid Events
+              A Legacy of Celebration Since 1990
             </h1>
             <div className="h-0.5 w-24 mx-auto mt-5 mb-6" style={{ background: 'rgba(184,147,63,0.6)' }} />
             <p className="text-lg max-w-2xl mx-auto" style={{ color: 'rgba(255,255,255,0.7)', fontWeight: 300 }}>
-              Rooted in tradition, elevated by passion — we've been India's most trusted wedding entertainment partner for over 15 years.
+              Established in 1990, Great Popular Band has been a trusted name in wedding entertainment for over three decades. From traditional royal baraats to modern wedding processions, we have proudly served thousands of families with exceptional music, premium services, and unforgettable experiences.
             </p>
           </motion.div>
         </div>
@@ -41,14 +41,14 @@ function About() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
             <span className="section-label">Who We Are</span>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold" style={{ fontFamily: 'Playfair Display,serif', color: 'var(--maroon)' }}>
-              15 Years of Crafting Royal Weddings
+              Great Popular Band: Royal Wedding Music Since 1990
             </h2>
             <div className="gold-divider w-20 mt-4" />
             <p className="mt-6 text-base leading-8" style={{ color: 'var(--text-mid)', fontWeight: 300 }}>
-              White Orchid Events was founded with a single mission: to make every wedding feel like a royal celebration. Starting with a small dhol troupe in Mumbai, we've grown into a full-service wedding entertainment company with 50+ artists serving families across India.
+              Great Popular Band began in 1990 with a passion for creating grand wedding celebrations. Over the years, we have grown into a premier entertainment partner, bringing energetic Punjabi Dhol, powerful band teams, DJ On Wheels, vintage cars, royal baggis, horses, and premium special effects to weddings across India.
             </p>
             <p className="mt-4 text-base leading-8" style={{ color: 'var(--text-mid)', fontWeight: 300 }}>
-              We deeply respect Indian wedding traditions — the energy of a Baraat, the soul of Shehnai at a mandap, the grandeur of a Ghori procession. Every service we offer is designed to honour these traditions while creating modern, unforgettable moments.
+              Our commitment to quality, professionalism, and innovation has made us one of the most trusted wedding entertainment providers. Whether it is a traditional baraat or a modern procession, we ensure every wedding becomes a memorable celebration.
             </p>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
@@ -62,7 +62,7 @@ function About() {
       {/* Stats */}
       <section className="py-16 sm:py-20" style={{ background: 'linear-gradient(135deg,#9b1c1c,#4a0e0e)' }}>
         <div className="section-frame grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-          {[{ v: 500, s: '+', l: 'Events' }, { v: 15, s: '+', l: 'Years' }, { v: 50, s: '+', l: 'Artists' }, { v: 20, s: '+', l: 'Cities' }].map(stat => (
+          {[{ v: 35, s: '+', l: 'Years of Excellence' }, { v: 5000, s: '+', l: 'Successful Weddings' }, { v: 50000, s: '+', l: 'Happy Guests' }, { v: 100, s: '%', l: 'Customer Commitment' }].map(stat => (
             <div key={stat.l}>
               <p className="text-4xl font-bold text-white" style={{ fontFamily: 'Playfair Display,serif' }}>
                 <AnimatedCounter end={stat.v} suffix={stat.s} />

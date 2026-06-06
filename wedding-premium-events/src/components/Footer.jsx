@@ -24,8 +24,8 @@ function Footer() {
                 <span className="text-xl font-bold" style={{ color: '#f5e8c8', fontFamily: 'Playfair Display,serif' }}>W</span>
               </div>
               <div>
-                <p className="font-bold text-lg text-white" style={{ fontFamily: 'Playfair Display,serif' }}>White Orchid Events</p>
-                <p className="text-xs tracking-widest" style={{ color: 'var(--gold)', opacity: 0.8 }}>PREMIUM WEDDING ENTERTAINMENT</p>
+                <p className="font-bold text-lg text-white" style={{ fontFamily: 'Playfair Display,serif' }}>Great Popular Band</p>
+                <p className="text-xs tracking-widest" style={{ color: 'var(--gold)', opacity: 0.8 }}>PREMIUM BARAAT ENTERTAINMENT</p>
               </div>
             </div>
             <p className="text-sm leading-7" style={{ color: 'rgba(255,255,255,0.55)', maxWidth: 280 }}>
@@ -76,7 +76,7 @@ function Footer() {
               </li>
               <li className="flex items-start gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
                 <FiMail className="h-4 w-4 flex-shrink-0 mt-0.5" style={{ color: 'var(--gold)' }} />
-                <span>hello@whiteorchidevents.in</span>
+                <span>hello@greatpopularband.in</span>
               </li>
               <li className="flex items-start gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
                 <FiMapPin className="h-4 w-4 flex-shrink-0 mt-0.5" style={{ color: 'var(--gold)' }} />
@@ -93,8 +93,8 @@ function Footer() {
 
         <hr style={{ borderColor: 'rgba(255,255,255,0.08)', margin: '3rem 0 1.5rem' }} />
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>
-          <p>© 2026 White Orchid Events. All rights reserved.</p>
-          <p>✦ Designed for Timeless Indian Weddings ✦</p>
+          <p>© 2026 Great Popular Band. All rights reserved.</p>
+          <p>✦ Designed for Grand Indian Baraat Celebrations ✦</p>
         </div>
       </div>
     </footer>

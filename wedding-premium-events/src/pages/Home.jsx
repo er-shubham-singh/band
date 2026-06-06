@@ -13,10 +13,10 @@ import React from 'react'
 const fadeInUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.65 } } }
 
 const stats = [
-  { value: 500, suffix: '+', label: 'Events Delivered' },
-  { value: 15, suffix: '+', label: 'Years of Legacy' },
-  { value: 98, suffix: '%', label: 'Happy Families' },
-  { value: 50, suffix: '+', label: 'Expert Artists' },
+  { value: 35, suffix: '+', label: 'Years of Excellence' },
+  { value: 5000, suffix: '+', label: 'Successful Weddings' },
+  { value: 50000, suffix: '+', label: 'Happy Guests Entertained' },
+  { value: 100, suffix: '%', label: 'Customer Commitment' },
 ]
 
 function Home() {
@@ -25,7 +25,7 @@ function Home() {
       <Hero />
 
       {/* Stats Counter Section */}
-      <section className="w-full py-16 sm:py-20"
+      {/* <section className="w-full py-16 sm:py-20"
         style={{ background: 'linear-gradient(135deg, #9b1c1c 0%, #7f1d1d 50%, #4a0e0e 100%)' }}>
         <div className="section-frame">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -39,7 +39,6 @@ function Home() {
                 <p className="text-4xl sm:text-5xl font-bold text-white" style={{ fontFamily: 'Playfair Display,serif' }}>
                   <AnimatedCounter end={stat.value} suffix={stat.suffix} duration={1800} />
                 </p>
-                <div className="h-0.5 w-10 mx-auto my-3" style={{ background: 'rgba(184,147,63,0.6)' }} />
                 <p className="text-xs sm:text-sm font-semibold tracking-widest uppercase"
                   style={{ color: 'rgba(245,232,200,0.75)' }}>
                   {stat.label}
@@ -48,19 +47,19 @@ function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Services */}
       <section className="w-full py-16 sm:py-24" style={{ background: 'var(--ivory)' }}>
         <div className="section-frame">
           <motion.div className="text-center mb-14" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-            <span className="section-label">Our Services</span>
+            <span className="section-label">Everything You Need For A Grand Baraat</span>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold" style={{ fontFamily: 'Playfair Display,serif', color: 'var(--maroon)' }}>
-              Complete Wedding Entertainment
+              Baraat Services That Make Every Entrance Spectacular
             </h2>
             <div className="gold-divider w-24 mx-auto mt-5" />
             <p className="mt-5 text-lg max-w-2xl mx-auto" style={{ color: 'var(--text-mid)', fontWeight: 300 }}>
-              From Dhol to Shehnai, Ghori to Palki — every tradition honoured with precision and passion.
+              From band teams and Punjabi Dhol to vintage cars, royal baggis, and spectacular effects, we deliver premium procession services that keep your celebration moving and memorable.
             </p>
           </motion.div>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -85,21 +84,21 @@ function Home() {
         <div className="section-frame">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-              <span className="section-label">Why Choose Us</span>
+              <span className="section-label">Why Great Popular Band?</span>
               <h2 className="mt-3 text-3xl sm:text-4xl font-bold" style={{ fontFamily: 'Playfair Display,serif', color: 'var(--maroon)' }}>
-                A Legacy of Royal Wedding Celebrations
+                Trusted Baraat Experts Since 1990
               </h2>
               <div className="gold-divider w-20 mt-4" />
               <p className="mt-6 text-lg leading-8" style={{ color: 'var(--text-mid)', fontWeight: 300 }}>
-                With over 15 years of experience, we've mastered the art of Indian wedding entertainment. Our troupe of 50+ artists brings authenticity, energy, and precision to every celebration.
+                For more than three decades, Great Popular Band has been part of countless wedding celebrations, carrying forward the traditions of music, joy, and royal wedding processions.
               </p>
               <ul className="mt-8 space-y-4">
                 {[
-                  'Traditional & contemporary performances',
-                  'Trained and professional artists',
-                  'Pan-India service with local expertise',
-                  'Custom packages for every budget',
-                  'Dedicated event coordinator assigned'
+                  'Serving since 1990 with over 35 years of experience',
+                  'Premium band teams, Dhol, DJ on Wheels and royal processions',
+                  'Experienced event coordinators and custom packages',
+                  'Modern sound, lighting, and unforgettable special effects',
+                  'On-time, professional service with 100% customer focus'
                 ].map(item => (
                   <li key={item} className="flex items-center gap-3 text-sm font-medium" style={{ color: 'var(--text-mid)' }}>
                     <span className="h-5 w-5 rounded-full flex items-center justify-center flex-shrink-0 text-xs"
