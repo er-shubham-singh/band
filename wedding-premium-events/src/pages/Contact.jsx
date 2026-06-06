@@ -15,7 +15,7 @@ function Contact() {
     setError('')
 
     try {
-      const res = await fetch('https://formspree.io/f/meewevwl', {
+      const res = await fetch('https://formspree.io/f/mykakowe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
           headers: {
