@@ -5,7 +5,7 @@ import { useState } from 'react'
 import React from 'react'
 
 function Contact() {
-  const [form, setForm] = useState({ name: '', mobile: '', message: '' })
+  const [form, setForm] = useState({ name: '', mobile: '', eventFrom: '', eventTo: '', venue: '', message: '' })
   const [sent, setSent] = useState(false)
   const [error, setError] = useState('')
 
@@ -17,16 +17,22 @@ function Contact() {
     try {
       const res = await fetch('https://formspree.io/f/mbdedwye', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-          headers: {
-    'Content-Type': 'application/json',
-    'Accept': 'application/json'
-  },
-        body: JSON.stringify({ name: form.name, mobile: form.mobile, message: form.message })
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name,
+          mobile: form.mobile,
+          eventFrom: form.eventFrom,
+          eventTo: form.eventTo,
+          venue: form.venue,
+          message: form.message,
+        }),
       })
       if (res.ok) {
         setSent(true)
-        setForm({ name: '', mobile: '', message: '' })
+        setForm({ name: '', mobile: '', eventFrom: '', eventTo: '', venue: '', message: '' })
       } else {
         setError('Unable to send inquiry. Please try again later.')
       }
@@ -102,7 +108,10 @@ function Contact() {
                 </h3>
                 {[
                   { name: 'name', label: 'Your Name', type: 'text', placeholder: 'Rahul & Priya' },
-                  { name: 'mobile', label: 'Mobile Number', type: 'tel', placeholder: '+91 98765 43210' }
+                  { name: 'mobile', label: 'Mobile Number', type: 'tel', placeholder: '+91 98765 43210' },
+                  { name: 'eventFrom', label: 'Event Date From', type: 'date', placeholder: '' },
+                  { name: 'eventTo', label: 'Event Date To', type: 'date', placeholder: '' },
+                  { name: 'venue', label: 'Event Venue', type: 'text', placeholder: 'Venue name or city' },
                 ].map(field => (
                   <div key={field.name}>
                     <label className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: 'var(--gold)' }}>
