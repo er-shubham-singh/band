@@ -37,7 +37,7 @@ const services = [
   {
     title: 'Umbrella Lights',
     category: 'Lighting',
-    image: 'https://images.unsplash.com/photo-1487222477894-894f03dd0c14?auto=format&w=1200&q=80',
+    image: 'https://cdn.corenexis.com/files/c/2297369720.jpg',
     description: 'Double-layer decorative umbrella lighting that makes the baraat shine through every step of the procession.',
     features: ['Dramatic lighting design', 'Evening procession glow', 'Premium visual impact']
   },
