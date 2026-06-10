@@ -2,7 +2,7 @@ const services = [
   {
     title: 'Wedding Band Teams',
     category: 'Entertainment',
-    image: 'https://cdn.corenexis.com/files/c/5482772720.jpg',
+    image: 'https://cdn.corenexis.com/files/c/4437255720.jpg',
     description: 'Professional band performers delivering energetic and traditional wedding music for every baraat and reception.',
     features: ['Live ceremony music', 'Dynamic procession sets', 'Royal stage energy']
   },
@@ -23,7 +23,7 @@ const services = [
   {
     title: 'Vintage Cars',
     category: 'Procession',
-    image: 'https://cdn.corenexis.com/files/c/4844198720.jpg',
+    image: 'https://cdn.corenexis.com/files/c/3589455720.jpg',
     description: 'Beautifully decorated vintage and luxury cars for groom entries and memorable wedding arrivals.',
     features: ['Classic car styling', 'Floral decor accents', 'VIP entry experience']
   },
