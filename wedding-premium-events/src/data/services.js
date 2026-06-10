@@ -30,7 +30,7 @@ const services = [
   {
     title: 'Royal Baggi & Horses',
     category: 'Procession',
-    image: 'https://images.unsplash.com/photo-1500538879713-1c7c2f0a63c1?auto=format&w=1200&q=80',
+    image: 'https://cdn.corenexis.com/files/c/3243982720.jpg',
     description: 'Traditional royal chariots and horse arrangements for grand wedding processions.',
     features: ['Royal arrival theme', 'Horse-led procession', 'Decorated baggi seating']
   },
