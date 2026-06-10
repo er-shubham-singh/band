@@ -44,14 +44,14 @@ const services = [
   {
     title: 'Special Effects',
     category: 'Spectacle',
-    image: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&w=1200&q=80',
+    image: 'https://cdn.corenexis.com/files/c/4947476720.jpg',
     description: 'CO2 guns, confetti shots, cold pyros, flame effects, flower showers, and more for a spectacular celebration.',
     features: ['Pyro effects', 'Confetti and flower showers', 'VIP moment highlights']
   },
   {
     title: 'Relationship Managers',
     category: 'Service',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&w=1200&q=80',
+    image: 'https://cdn.corenexis.com/files/c/8614841720.jpg',
     description: 'Dedicated event coordinators ensuring a smooth and hassle-free experience from planning to execution.',
     features: ['Dedicated point of contact', 'Timeline planning support', 'On-site coordination']
   }

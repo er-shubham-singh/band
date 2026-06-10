@@ -53,7 +53,7 @@ function About() {
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
             <div className="overflow-hidden rounded-3xl" style={{ boxShadow: '0 20px 60px rgba(155,28,28,0.18)', border: '2px solid rgba(184,147,63,0.2)' }}>
-              <img src="https://images.unsplash.com/photo-1514412076814-7cd65a1b74c5?auto=format&w=900&q=80" alt="Wedding team" className="w-full h-96 object-cover"/>
+              <img src="https://cdn.corenexis.com/files/c/4531786720.jpg" alt="Wedding team" className="w-full h-96 object-cover"/>
             </div>
           </motion.div>
         </div>

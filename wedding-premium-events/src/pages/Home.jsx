@@ -119,7 +119,7 @@ function Home() {
               <div className="overflow-hidden rounded-3xl"
                 style={{ boxShadow: '0 20px 60px rgba(155,28,28,0.2)', border: '2px solid rgba(184,147,63,0.2)' }}>
                 <img
-                  src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&w=900&q=85"
+                  src="https://cdn.corenexis.com/files/c/4531786720.jpg"
                   alt="Dhol performance"
                   className="w-full h-96 object-cover"
                 />
