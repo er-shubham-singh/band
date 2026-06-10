@@ -21,7 +21,7 @@ const sliderItems = [
     buttonLink: '/services',
   },
   {
-    image: 'https://images.unsplash.com/photo-1522726602510-1e0f8d876046?auto=format&w=1400&q=80',
+    image: 'https://cdn.corenexis.com/files/c/8434546720.jpg',
     label: 'Punjabi Dhol Beats',
     heading: <>Energetic Drums That Keep<br/>the Baraat <em style={{ color: '#e8c96e', fontStyle: 'italic' }}>Moving</em></>,
     body: 'Our Punjabi Dhol performers add unstoppable rhythm and excitement to every wedding procession, ensuring guests dance from start to finish.',
