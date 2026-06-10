@@ -25,28 +25,33 @@ function Gallery() {
         <div className="section-frame">
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-5">
             {galleryItems.map((item, i) => (
-              <motion.div key={i}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.04 }}
-                className="break-inside-avoid mb-5 group overflow-hidden rounded-2xl relative cursor-pointer"
-                style={{ border: '1px solid rgba(184,147,63,0.15)', boxShadow: '0 4px 20px rgba(155,28,28,0.07)' }}>
-                <img
-                  src={item.image}
-                  alt={item.caption || `Gallery ${i+1}`}
-                  className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  style={{ maxHeight: i % 3 === 1 ? 320 : 220 }}
-                />
-                {item.caption && (
-                  <div className="absolute inset-0 flex items-end opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    style={{ background: 'linear-gradient(0deg,rgba(74,14,14,0.7) 0%,transparent 55%)' }}>
-                    <p className="p-4 text-white text-sm font-medium" style={{ fontFamily: 'Playfair Display,serif' }}>
-                      {item.caption}
-                    </p>
-                  </div>
-                )}
-              </motion.div>
+<motion.div
+  key={i}
+  className="break-inside-avoid mb-5 group overflow-hidden rounded-2xl relative cursor-pointer"
+>
+  <img
+    src={item.image}
+    alt={item.caption || `Gallery ${i + 1}`}
+    className="w-full h-auto block transition-transform duration-500 group-hover:scale-105"
+  />
+
+  {item.caption && (
+    <div
+      className="absolute inset-0 flex items-end opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      style={{
+        background:
+          "linear-gradient(0deg,rgba(74,14,14,0.7) 0%,transparent 55%)",
+      }}
+    >
+      <p
+        className="p-4 text-white text-sm font-medium"
+        style={{ fontFamily: "Playfair Display,serif" }}
+      >
+        {item.caption}
+      </p>
+    </div>
+  )}
+</motion.div>
             ))}
           </div>
         </div>
