@@ -13,7 +13,7 @@ const sliderItems = [
     showCallBtn: true,
   },
   {
-    image: 'https://images.unsplash.com/photo-1497614730161-4f0322302da4?auto=format&w=1400&q=80',
+    image: 'https://cdn.corenexis.com/files/c/9651884720.jpg',
     label: 'Royal Baggi Entrances',
     heading: <>Grand Processions with<br/>Horses &amp; <em style={{ color: '#e8c96e', fontStyle: 'italic' }}>Heritage</em></>,
     body: 'Create a majestic wedding entry with royal baggis, decorated horses, and procession lighting that makes every arrival cinematic and unforgettable.',
@@ -37,7 +37,7 @@ const sliderItems = [
     buttonLink: '/services',
   },
   {
-    image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&w=1400&q=80',
+    image: 'https://cdn.corenexis.com/files/c/4486925720.jpg',
     label: 'Vintage Car Style',
     heading: <>Vintage Cars &amp;<br/><em style={{ color: '#e8c96e', fontStyle: 'italic' }}>Luxury Entries</em></>,
     body: 'Arrive in timeless style with beautifully decorated vintage and luxury cars crafted to elevate your wedding procession to cinematic heights.',
