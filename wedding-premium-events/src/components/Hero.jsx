@@ -29,7 +29,7 @@ const sliderItems = [
     buttonLink: '/services',
   },
   {
-    image: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&w=1400&q=80',
+    image: 'https://cdn.corenexis.com/files/c/2731234720.jpg',
     label: 'DJ On Wheels',
     heading: <>Mobile DJ Setups for<br/>Modern <em style={{ color: '#e8c96e', fontStyle: 'italic' }}>Processions</em></>,
     body: 'Bring premium sound, lighting, and special effects straight into your baraat with our DJ on Wheels experience — the future of wedding entertainment.',
@@ -116,7 +116,7 @@ function Hero() {
             }}
           >
             {/* Label */}
-            <div className="flex items-center gap-3 mb-5">
+            {/* <div className="flex items-center gap-3 mb-5">
               <div style={{ height: 1, width: 40, background: '#b8933f' }} />
               <span
                 style={{
@@ -130,24 +130,26 @@ function Hero() {
               >
                 {item.label}
               </span>
-            </div>
+            </div> */}
 
             {/* Heading */}
+
+            
             <h1
               style={{
                 fontFamily: 'Playfair Display, serif',
                 fontSize: 'clamp(2rem, 4.5vw, 3.2rem)',
                 lineHeight: 1.18,
-                color: '#fff',
+                color: '#d4aa5a',
                 fontWeight: 700,
                 margin: '0 0 18px',
               }}
             >
-              {item.heading}
+              {item.label}
             </h1>
 
             {/* Body */}
-            <p
+            {/* <p
               style={{
                 fontSize: 'clamp(13px, 1.5vw, 15px)',
                 lineHeight: 1.8,
@@ -159,7 +161,7 @@ function Hero() {
               }}
             >
               {item.body}
-            </p>
+            </p> */}
 
             {/* Buttons */}
             <div className="flex flex-wrap gap-3">
