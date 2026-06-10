@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 
 const sliderItems = [
   {
-    image: 'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&w=1400&q=80',
+    image: 'https://cdn.corenexis.com/files/c/6192992720.jpg',
     label: "India's Premier Wedding Baraat Entertainment",
     heading: <>Three Decades of Music,<br/>Tradition &amp; Unforgettable<br/><em style={{ color: '#e8c96e', fontStyle: 'italic' }}>Baraats.</em></>,
     body: '"The Sound of Celebration. The Spirit of Royalty." For over 35 years, Great Popular Band has been making wedding celebrations grander with energetic Punjabi Dhol and powerful Band Teams to DJ on Wheels, Vintage Cars, Royal Baggis, Horses, Pyro Effects, and Premium Wedding Processions.',
