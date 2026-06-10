@@ -79,4 +79,56 @@ const galleryItems = [
   }
 ]
 
-export default galleryItems
+const bandGalleryItems = [
+  'one',
+  'two',
+  'three',
+  'four',
+  'five',
+  'six',
+  'seven',
+  'eight',
+  'nine',
+  'ten',
+  'eleven',
+  'twelve',
+  'thirteen',
+  'fourteen',
+  'fifteen',
+  'sixteen',
+  'seventeen',
+  'eighteen',
+  'nineteen',
+  'twenty',
+  'twenty-one',
+  'twenty-two',
+  'twenty-three',
+  'twenty-four',
+  'twenty-five',
+  'twenty-six',
+  'twenty-seven',
+  'twenty-eight',
+  'twenty-nine',
+  'thirty',
+  'thirty-one',
+  'thirty-two',
+  'thirty-three',
+  'thirty-four',
+  'thirty-five',
+  'thirty-six',
+  'thirty-seven',
+  'thirty-eight',
+  'thirty-nine',
+  'forty',
+  'forty-one',
+  'forty-two',
+  'forty-three'
+].map((imageName, index) => ({
+  title: `Band celebration ${index + 1}`,
+  category: 'Band',
+  image: `/band/${imageName}.jpg`,
+  caption: `Band celebration ${index + 1}`,
+  description: 'Live band moments from premium wedding celebrations.'
+}))
+
+export default [...galleryItems, ...bandGalleryItems]

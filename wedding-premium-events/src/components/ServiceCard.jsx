@@ -3,12 +3,12 @@ import React from 'react'
 function ServiceCard({ service }) {
   return (
     <div className="card-royal group overflow-hidden flex flex-col">
-      <div className="relative overflow-hidden h-52">
-        <img
-          src={service.image}
-          alt={service.title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-        />
+<div className="relative overflow-hidden">
+  <img
+    src={service.image}
+    alt={service.title}
+    className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+  />
         <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-70"
           style={{ background: 'linear-gradient(0deg, rgba(74,14,14,0.6) 0%, transparent 55%)' }} />
         <div className="absolute top-3 left-3">

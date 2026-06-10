@@ -2,28 +2,28 @@ const services = [
   {
     title: 'Wedding Band Teams',
     category: 'Entertainment',
-    image: 'https://images.unsplash.com/photo-1512954153167-6f9f495d1b7f?auto=format&w=1200&q=80',
+    image: 'https://cdn.corenexis.com/files/c/5482772720.jpg',
     description: 'Professional band performers delivering energetic and traditional wedding music for every baraat and reception.',
     features: ['Live ceremony music', 'Dynamic procession sets', 'Royal stage energy']
   },
   {
     title: 'Punjabi Dhol',
     category: 'Procession',
-    image: 'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&w=1200&q=80',
+    image: 'https://cdn.corenexis.com/files/c/5833681720.jpg',
     description: 'High-energy dhol artists that keep your baraat dancing from start to finish.',
     features: ['Rhythmic procession beats', 'Cultural celebration energy', 'Custom procession choreography']
   },
   {
     title: 'DJ On Wheels',
     category: 'Music',
-    image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&w=1200&q=80',
+    image: 'https://cdn.corenexis.com/files/c/5783524720.jpg',
     description: 'Mobile DJ setups with premium sound, lighting, and special effects to power the celebration.',
     features: ['Live DJ mixes', 'Sound & light production', 'Route-ready mobile setup']
   },
   {
     title: 'Vintage Cars',
     category: 'Procession',
-    image: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&w=1200&q=80',
+    image: 'https://cdn.corenexis.com/files/c/4844198720.jpg',
     description: 'Beautifully decorated vintage and luxury cars for groom entries and memorable wedding arrivals.',
     features: ['Classic car styling', 'Floral decor accents', 'VIP entry experience']
   },
