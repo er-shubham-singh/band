@@ -127,7 +127,7 @@ function Home() {
               {/* Decorative offset box */}
               <div className="absolute -bottom-6 -left-6 rounded-2xl p-5 hidden sm:block"
                 style={{ background: 'linear-gradient(135deg,#b8933f,#d4aa5a)', boxShadow: '0 8px 30px rgba(184,147,63,0.4)' }}>
-                <p className="text-xl font-bold" style={{ fontFamily: 'Playfair Display,serif', color: '#1a0a0a' }}>15+</p>
+                <p className="text-xl font-bold" style={{ fontFamily: 'Playfair Display,serif', color: '#1a0a0a' }}>30+</p>
                 <p className="text-xs font-semibold" style={{ color: 'rgba(26,10,10,0.7)' }}>Years of<br/>Excellence</p>
               </div>
             </motion.div>

@@ -149,7 +149,7 @@ function Hero() {
             </h1>
 
             {/* Body */}
-            {/* <p
+            <p
               style={{
                 fontSize: 'clamp(13px, 1.5vw, 15px)',
                 lineHeight: 1.8,
@@ -161,7 +161,7 @@ function Hero() {
               }}
             >
               {item.body}
-            </p> */}
+            </p>
 
             {/* Buttons */}
             <div className="flex flex-wrap gap-3">
